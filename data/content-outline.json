@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0",
+  "examInfo": {
+    "name": "Certified Emergency Nurse (CEN)",
+    "totalScoredQuestions": 150,
+    "totalQuestions": 175,
+    "timeMinutes": 180
+  },
+  "categories": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular Emergencies",
+      "examPercentage": 12.7,
+      "examQuestions": 19,
+      "targetPracticeQuestions": 127,
+      "subcategories": ["Acute Coronary Syndromes", "Dysrhythmias", "Heart Failure", "Hypertensive Emergencies", "Aortic Emergencies", "Pericardial Emergencies"]
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory Emergencies",
+      "examPercentage": 10,
+      "examQuestions": 15,
+      "targetPracticeQuestions": 100,
+      "subcategories": ["Asthma", "COPD", "Pneumonia", "Pulmonary Embolism", "Pneumothorax", "Acute Respiratory Distress"]
+    },
+    {
+      "id": "medical-communicable",
+      "name": "Medical & Communicable Disease Emergencies",
+      "examPercentage": 12,
+      "examQuestions": 18,
+      "targetPracticeQuestions": 120,
+      "subcategories": ["Sepsis", "Endocrine Emergencies", "Electrolyte Imbalances", "Infectious Diseases", "Immunocompromised Conditions", "Hematologic Emergencies"]
+    },
+    {
+      "id": "neurological",
+      "name": "Neurological Emergencies",
+      "examPercentage": 8.7,
+      "examQuestions": 13,
+      "targetPracticeQuestions": 87,
+      "subcategories": ["Stroke", "Seizures", "Meningitis", "Headaches", "Spinal Cord Injuries", "Increased Intracranial Pressure"]
+    },
+    {
+      "id": "gastrointestinal",
+      "name": "Gastrointestinal Emergencies",
+      "examPercentage": 8,
+      "examQuestions": 12,
+      "targetPracticeQuestions": 80,
+      "subcategories": ["GI Bleeding", "Bowel Obstruction", "Appendicitis", "Pancreatitis", "Hepatic Failure", "Cholecystitis"]
+    },
+    {
+      "id": "ob-gyn",
+      "name": "Obstetric & Gynecological Emergencies",
+      "examPercentage": 4,
+      "examQuestions": 6,
+      "targetPracticeQuestions": 40,
+      "subcategories": ["Ectopic Pregnancy", "Emergency Delivery", "Placental Abruption", "Sexual Assault", "Vaginal Bleeding"]
+    },
+    {
+      "id": "orthopedic-wound",
+      "name": "Orthopedic & Wound Emergencies",
+      "examPercentage": 8.7,
+      "examQuestions": 13,
+      "targetPracticeQuestions": 87,
+      "subcategories": ["Fractures", "Dislocations", "Amputations", "Compartment Syndrome", "Wound Management", "Soft Tissue Injuries"]
+    },
+    {
+      "id": "psychosocial",
+      "name": "Psychosocial Emergencies",
+      "examPercentage": 6.7,
+      "examQuestions": 10,
+      "targetPracticeQuestions": 67,
+      "subcategories": ["Suicidal Ideation", "Homicidal Ideation", "Acute Psychosis", "Anxiety Disorders", "Abuse and Neglect", "Aggressive Behavior"]
+    },
+    {
+      "id": "shock",
+      "name": "Shock Emergencies",
+      "examPercentage": 6.7,
+      "examQuestions": 10,
+      "targetPracticeQuestions": 67,
+      "subcategories": ["Hypovolemic Shock", "Cardiogenic Shock", "Distributive Shock", "Obstructive Shock", "Neurogenic Shock"]
+    },
+    {
+      "id": "toxicology",
+      "name": "Toxicology & Substance Abuse Emergencies",
+      "examPercentage": 5.3,
+      "examQuestions": 8,
+      "targetPracticeQuestions": 53,
+      "subcategories": ["Drug Overdose", "Alcohol Intoxication", "Poisoning", "Withdrawal Syndromes", "Chemical Exposure"]
+    },
+    {
+      "id": "environment",
+      "name": "Environment Emergencies",
+      "examPercentage": 6,
+      "examQuestions": 9,
+      "targetPracticeQuestions": 60,
+      "subcategories": ["Hypothermia", "Hyperthermia", "Drowning", "Burns", "Electrical Injuries", "Envenomation"]
+    },
+    {
+      "id": "maxillofacial-ocular",
+      "name": "Maxillofacial & Ocular Emergencies",
+      "examPercentage": 5.3,
+      "examQuestions": 8,
+      "targetPracticeQuestions": 53,
+      "subcategories": ["Facial Trauma", "Dental Emergencies", "Eye Injuries", "Epistaxis", "Ear Emergencies"]
+    },
+    {
+      "id": "professional",
+      "name": "Professional Issues",
+      "examPercentage": 6,
+      "examQuestions": 9,
+      "targetPracticeQuestions": 60,
+      "subcategories": ["Triage", "Disaster Management", "Evidence-Based Practice", "Patient Safety", "Legal and Ethical Issues", "End-of-Life Care"]
+    }
+  ]
+}
