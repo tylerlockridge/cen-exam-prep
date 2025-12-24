@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- SEO -->
+  <title>CEN Exam Prep Pro | Study Guides</title>
+  <meta name="description" content="Browse comprehensive CEN study guides by category. Key concepts, clinical pearls, common presentations, and interventions for emergency nursing." />
+  <meta name="keywords" content="CEN study guide, emergency nursing, CEN categories, clinical pearls, interventions, exam prep" />
+  <meta name="author" content="CEN Exam Prep Pro" />
+  
+  <!-- Theme color -->
+  <meta name="theme-color" content="#2563eb" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- App JS -->
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/study.js" defer></script>
+</head>
+
+<body data-page="study-guides">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- HEADER + NAVIGATION (matches index.html) -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand -->
+        <div class="brand">
+          <a href="index.html" class="brand-link" data-nav="home">
+            <span class="brand-icon">🏥</span>
+            <span class="brand-title">CEN Exam Prep Pro</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button 
+          class="nav-toggle" 
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          data-action="toggle-nav"
+        >
+          <span class="nav-toggle-icon">☰</span>
+        </button>
+
+        <!-- Primary navigation -->
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav-list" id="primary-nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link" data-nav="home">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="study.html" class="nav-link active" aria-current="page" data-nav="study-guides">
+                <span class="nav-icon">📚</span>
+                <span>Study Guides</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="quiz.html" class="nav-link" data-nav="practice-quiz">
+                <span class="nav-icon">✏️</span>
+                <span>Practice Quiz</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="flashcards.html" class="nav-link" data-nav="flashcards">
+                <span class="nav-icon">🎴</span>
+                <span>Flashcards</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link" data-nav="progress">
+                <span class="nav-icon">📊</span>
+                <span>Progress</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="site-main" role="main">
+    <div class="container">
+      
+      <!-- PAGE HEADER -->
+      <section class="study-page-header">
+        <h1 class="section-title">Study Guides</h1>
+        <p class="section-subtitle">
+          Comprehensive review materials for all 13 CEN exam categories. Select a category below to begin studying.
+        </p>
+      </section>
+
+      <!-- SEARCH & FILTER BAR -->
+      <section class="study-search-bar" aria-label="Search and filter">
+        <div class="search-container">
+          <input 
+            type="search" 
+            id="studySearch"
+            class="search-input"
+            placeholder="Search study guides..."
+            aria-label="Search study guides"
+            data-action="search-guides"
+            data-hook="search-input"
+          />
+          <button 
+            class="search-btn" 
+            type="button"
+            aria-label="Search"
+            data-action="search-submit"
+          >
+            🔍
+          </button>
+        </div>
+        
+        <div class="filter-container">
+          <label for="categoryFilter" class="sr-only">Filter by category</label>
+          <select 
+            id="categoryFilter" 
+            class="filter-select"
+            data-action="filter-category"
+            data-hook="category-filter"
+          >
+            <option value="all">All Categories</option>
+            <option value="cardiovascular">Cardiovascular</option>
+            <option value="respiratory">Respiratory</option>
+            <option value="trauma">Trauma</option>
+            <option value="neurological">Neurological</option>
+            <option value="gastrointestinal">Gastrointestinal</option>
+            <option value="genitourinary">GU/GYN/OB</option>
+            <option value="psychosocial">Psychosocial</option>
+            <option value="medical">Medical</option>
+            <option value="maxillofacial">Max/Ocular/Ortho</option>
+            <option value="environmental">Environment/Tox</option>
+            <option value="professional">Professional Issues</option>
+            <option value="disaster">Disaster/Triage</option>
+            <option value="special-populations">Special Populations</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- CATEGORY SELECTOR -->
+      <section class="category-selector" aria-label="Select study category" data-hook="category-selector">
+        <h2 class="sr-only">Select a Category</h2>
+        
+        <div class="categories-grid">
+          
+          <!-- Cardiovascular -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="cardiovascular"
+            aria-label="Study Cardiovascular"
+          >
+            <span class="category-icon">❤️</span>
+            <span class="category-name">Cardiovascular</span>
+          </button>
+
+          <!-- Respiratory -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="respiratory"
+            aria-label="Study Respiratory"
+          >
+            <span class="category-icon">🫁</span>
+            <span class="category-name">Respiratory</span>
+          </button>
+
+          <!-- Trauma -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="trauma"
+            aria-label="Study Trauma"
+          >
+            <span class="category-icon">🚑</span>
+            <span class="category-name">Trauma</span>
+          </button>
+
+          <!-- Neurological -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="neurological"
+            aria-label="Study Neurological"
+          >
+            <span class="category-icon">🧠</span>
+            <span class="category-name">Neurological</span>
+          </button>
+
+          <!-- Gastrointestinal -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="gastrointestinal"
+            aria-label="Study Gastrointestinal"
+          >
+            <span class="category-icon">🫃</span>
+            <span class="category-name">Gastrointestinal</span>
+          </button>
+
+          <!-- Genitourinary/Gynecology/Obstetrical -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="genitourinary"
+            aria-label="Study GU/GYN/OB"
+          >
+            <span class="category-icon">🩺</span>
+            <span class="category-name">GU/GYN/OB</span>
+          </button>
+
+          <!-- Psychosocial -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="psychosocial"
+            aria-label="Study Psychosocial"
+          >
+            <span class="category-icon">🧘</span>
+            <span class="category-name">Psychosocial</span>
+          </button>
+
+          <!-- Medical -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="medical"
+            aria-label="Study Medical"
+          >
+            <span class="category-icon">💊</span>
+            <span class="category-name">Medical</span>
+          </button>
+
+          <!-- Maxillofacial/Ocular/Orthopedic/Wound -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="maxillofacial"
+            aria-label="Study Max/Ocular/Ortho"
+          >
+            <span class="category-icon">🦴</span>
+            <span class="category-name">Max/Ocular/Ortho</span>
+          </button>
+
+          <!-- Environment/Toxicology -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="environmental"
+            aria-label="Study Environment/Tox"
+          >
+            <span class="category-icon">☠️</span>
+            <span class="category-name">Environment/Tox</span>
+          </button>
+
+          <!-- Professional Issues -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="professional"
+            aria-label="Study Professional Issues"
+          >
+            <span class="category-icon">👔</span>
+            <span class="category-name">Professional Issues</span>
+          </button>
+
+          <!-- System/Disaster/Triage -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="disaster"
+            aria-label="Study Disaster/Triage"
+          >
+            <span class="category-icon">🚨</span>
+            <span class="category-name">Disaster/Triage</span>
+          </button>
+
+          <!-- Special Populations -->
+          <button 
+            class="category-select-btn" 
+            type="button"
+            data-action="select-category" 
+            data-category="special-populations"
+            aria-label="Study Special Populations"
+          >
+            <span class="category-icon">👶</span>
+            <span class="category-name">Special Populations</span>
+          </button>
+
+        </div>
+      </section>
+
+      <!-- STUDY CONTENT AREA -->
+      <div class="study-content-wrapper">
+        
+        <!-- Table of Contents Sidebar (Desktop) -->
+        <aside class="toc-sidebar" aria-label="Table of contents" data-hook="toc-sidebar">
+          <h3 class="toc-title">Contents</h3>
+          <nav class="toc-nav">
+            <ul class="toc-list" id="tocList">
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#key-concepts">Key Concepts</a></li>
+              <li><a href="#clinical-pearls">Clinical Pearls</a></li>
+              <li><a href="#presentations">Common Presentations</a></li>
+              <li><a href="#interventions">Interventions</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Main Study Content -->
+        <article class="study-content-area" data-hook="study-content">
+          <div id="studyGuideContent" class="study-guide-container">
+            
+            <!-- Placeholder Content (shown when no category selected) -->
+            <div class="study-placeholder">
+              <div class="placeholder-icon">📖</div>
+              <h2>Welcome to Study Guides</h2>
+              <p>Select a category from above to begin studying comprehensive review materials for the CEN exam.</p>
+              <p class="placeholder-hint">
+                Each study guide includes:
+              </p>
+              <ul class="placeholder-list">
+                <li>📋 Overview of the category</li>
+                <li>💡 Key concepts and definitions</li>
+                <li>⭐ Clinical pearls and tips</li>
+                <li>🏥 Common presentations</li>
+                <li>💉 Interventions and treatments</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Action Buttons (shown when guide is loaded) -->
+          <div class="study-actions" style="display: none;" data-hook="study-actions">
+            <button 
+              class="action-btn action-btn-print" 
+              type="button"
+              data-action="print-guide"
+              aria-label="Print study guide"
+            >
+              <span class="action-icon">🖨️</span>
+              <span class="action-text">Print Guide</span>
+            </button>
+
+            <button 
+              class="action-btn action-btn-download" 
+              type="button"
+              data-action="download-guide"
+              aria-label="Download study guide as PDF"
+            >
+              <span class="action-icon">📥</span>
+              <span class="action-text">Download PDF</span>
+            </button>
+
+            <button 
+              class="action-btn action-btn-quiz" 
+              type="button"
+              data-action="quiz-category"
+              aria-label="Take quiz on this category"
+            >
+              <span class="action-icon">✏️</span>
+              <span class="action-text">Take Quiz</span>
+            </button>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER (matches index.html) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copyright">
+          &copy; 2025 CEN Exam Prep Pro. Built with ❤️ for Emergency Nurses.
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

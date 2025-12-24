@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    CEN Exam Prep Pro - Practice Quiz Page (quiz.html)
+    - Matches header/nav/footer structure and class naming used by the app stylesheet
+    - Quiz screens:
+      1) Setup (visible by default)
+      2) Interface (hidden by default; populated by JS)
+      3) Results (hidden by default; populated by JS)
+    - JS integration:
+      - js/config.js: global app configuration (categories, exam date, etc.)
+      - js/app.js: shared app shell behaviors (nav toggle, common hooks)
+      - js/quiz.js: quiz engine (state, rendering, scoring)
+  -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>CEN Exam Prep Pro | Practice Quiz</title>
+  <meta name="description" content="Practice CEN-style multiple-choice questions with immediate feedback, explanations, bookmarking, and performance results." />
+  <meta name="keywords" content="CEN practice questions, emergency nursing quiz, multiple choice, exam prep, CEN test" />
+  <meta name="author" content="CEN Exam Prep Pro" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- App JS -->
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+
+<body data-page="practice-quiz">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================
+       Header + Primary Navigation (shared)
+       ========================= -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand -->
+        <div class="brand" aria-label="CEN Exam Prep Pro home">
+          <a class="brand-link" href="index.html" data-nav="home" aria-label="Go to CEN Exam Prep Pro home">
+            <span class="brand-icon" aria-hidden="true">🏥</span>
+            <span class="brand-title">CEN Exam Prep Pro</span>
+          </a>
+        </div>
+
+        <!-- Mobile nav toggle -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          data-action="toggle-nav"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <!-- Primary navigation -->
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-nav="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="study.html" data-nav="study-guides">Study Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="quiz.html" aria-current="page" data-nav="practice-quiz">Practice Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="flashcards.html" data-nav="flashcards">Flashcards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="progress.html" data-nav="progress">Progress</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+       Main Content
+       ========================= -->
+  <main id="main" class="site-main" role="main">
+    <div class="container">
+      <!-- =========================
+           Page Header
+           ========================= -->
+      <header class="study-page-header" aria-label="Practice quiz page header">
+        <h1 class="section-title">Practice Quiz</h1>
+        <p class="section-subtitle">
+          Answer CEN-style multiple-choice questions with immediate feedback and explanations.
+          Configure your quiz below to target weak areas or run a random mix.
+        </p>
+      </header>
+
+      <!-- ==========================================================
+           1) QUIZ SETUP SCREEN (VISIBLE BY DEFAULT)
+           - data-hook="quiz-setup"
+           ========================================================== -->
+      <section class="quiz-setup-screen" data-hook="quiz-setup" aria-label="Quiz setup">
+        <article class="stat-card" aria-label="Quiz setup form">
+          <div class="stat-content">
+            <h2 class="stat-label">Quiz Setup</h2>
+            <p class="section-subtitle mt-2">
+              Select a category, question count, and difficulty. Timed mode is optional.
+            </p>
+
+            <form class="mt-4" aria-label="Configure quiz" data-hook="quiz-setup-form">
+              <!-- Category selection -->
+              <div class="mt-4" role="group" aria-label="Category selection">
+                <label for="quizCategory" class="stat-label">Category</label>
+                <select
+                  id="quizCategory"
+                  name="quizCategory"
+                  aria-label="Select quiz category"
+                  data-filter="quiz-category"
+                  style="margin-top: 0.35rem; width: 100%; padding: 0.75rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);"
+                >
+                  <option value="random" selected>Random Mix</option>
+                  <option value="cardiovascular">Cardiovascular</option>
+                  <option value="respiratory">Respiratory</option>
+                  <option value="trauma">Trauma</option>
+                  <option value="neurological">Neurological</option>
+                  <option value="gastrointestinal">Gastrointestinal</option>
+                  <option value="genitourinary-gynecology-obstetrical">Genitourinary/Gynecology/Obstetrical</option>
+                  <option value="psychosocial">Psychosocial</option>
+                  <option value="medical">Medical</option>
+                  <option value="maxillofacial-ocular-orthopedic-wound">Maxillofacial/Ocular/Orthopedic/Wound</option>
+                  <option value="environment-toxicology">Environment/Toxicology</option>
+                  <option value="professional-issues">Professional Issues</option>
+                  <option value="system-disaster-triage">System/Disaster/Triage</option>
+                  <option value="special-populations">Special Populations</option>
+                </select>
+              </div>
+
+              <!-- Number of questions -->
+              <div class="mt-4" role="group" aria-label="Number of questions selection">
+                <label for="quizCount" class="stat-label">Number of Questions</label>
+                <select
+                  id="quizCount"
+                  name="quizCount"
+                  aria-label="Select number of questions"
+                  data-filter="quiz-count"
+                  style="margin-top: 0.35rem; width: 100%; padding: 0.75rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);"
+                >
+                  <option value="10" selected>10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="all">All</option>
+                </select>
+              </div>
+
+              <!-- Difficulty -->
+              <div class="mt-4" role="group" aria-label="Difficulty selection">
+                <label for="quizDifficulty" class="stat-label">Difficulty</label>
+                <select
+                  id="quizDifficulty"
+                  name="quizDifficulty"
+                  aria-label="Select difficulty"
+                  data-filter="quiz-difficulty"
+                  style="margin-top: 0.35rem; width: 100%; padding: 0.75rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);"
+                >
+                  <option value="all" selected>All</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+
+              <!-- Timed mode toggle (optional) -->
+              <div class="mt-4" role="group" aria-label="Timed mode">
+                <div style="display:flex; align-items:center; gap:0.75rem;">
+                  <input
+                    id="quizTimedMode"
+                    type="checkbox"
+                    name="quizTimedMode"
+                    data-filter="quiz-timed"
+                    aria-label="Enable timed mode"
+                    style="width: 18px; height: 18px;"
+                  />
+                  <label for="quizTimedMode" class="stat-label" style="margin:0;">Timed Mode</label>
+                </div>
+                <p class="section-subtitle mt-2" style="max-width: 70ch;">
+                  When enabled, a timer will track your elapsed time. (Future: per-question or overall time limits.)
+                </p>
+              </div>
+
+              <!-- Start button -->
+              <div class="mt-6" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <button
+                  type="button"
+                  class="action-btn action-btn-primary"
+                  data-action="start-quiz"
+                  aria-label="Start quiz"
+                  style="padding:0.9rem 1rem; width:100%; justify-content:center;"
+                >
+                  <span class="action-icon" aria-hidden="true">▶️</span>
+                  <span class="action-text"><strong>Start Quiz</strong><span>Begin practice now</span></span>
+                </button>
+
+                <div id="setupStatus" role="status" aria-live="polite" class="mt-2" data-hook="setup-status" style="width:100%; color: var(--color-text-muted);">
+                  Ready.
+                </div>
+              </div>
+            </form>
+          </div>
+        </article>
+      </section>
+
+      <!-- ==========================================================
+           2) QUIZ INTERFACE SCREEN (HIDDEN BY DEFAULT)
+           - data-hook="quiz-interface"
+           ========================================================== -->
+      <section
+        class="quiz-interface-screen"
+        data-hook="quiz-interface"
+        aria-label="Quiz interface"
+        hidden
+      >
+        <!-- Quiz header -->
+        <header class="quiz-header stat-card" aria-label="Quiz status bar">
+          <div class="stat-content" style="width:100%;">
+            <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; justify-content:space-between;">
+              <div>
+                <div class="stat-label">Category</div>
+                <div class="stat-value" id="quizCategoryName" data-hook="quiz-category-name" style="font-size:1.25rem;">
+                  Random Mix
+                </div>
+              </div>
+
+              <div class="text-center" aria-label="Question progress">
+                <div class="stat-label">Progress</div>
+                <div class="stat-value" id="quizProgressText" data-hook="quiz-progress-text" style="font-size:1.25rem;">
+                  Question 1 of 10
+                </div>
+              </div>
+
+              <div class="text-center quiz-timer" aria-label="Timer display">
+                <div class="stat-label">Timer</div>
+                <div class="stat-value" id="quizTimer" data-hook="quiz-timer" style="font-size:1.25rem;">
+                  00:00
+                </div>
+              </div>
+
+              <div>
+                <button
+                  type="button"
+                  class="action-btn action-btn-tertiary"
+                  data-action="exit-quiz"
+                  aria-label="Exit quiz"
+                  style="padding:0.75rem 1rem; width:auto;"
+                >
+                  <span class="action-icon" aria-hidden="true">🚪</span>
+                  <span class="action-text"><strong>Exit</strong><span>End session</span></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="quiz-progress-bar mt-4" aria-label="Quiz progress bar" style="width:100%;">
+              <div
+                id="quizProgressBar"
+                data-hook="quiz-progress-bar"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                aria-label="Progress"
+                style="height: 10px; background: var(--color-border); border-radius: 999px; overflow:hidden;"
+              >
+                <div
+                  id="quizProgressFill"
+                  data-hook="quiz-progress-fill"
+                  style="height: 100%; width: 0%; background: var(--color-primary); transition: width var(--transition);"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Question container (populated by JS) -->
+        <article class="question-container stat-card" data-question-id="" aria-label="Question" data-hook="question-container">
+          <div class="question-header" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+            <div class="question-number" id="questionNumber" data-hook="question-number" aria-label="Question number">
+              Question 1 of 10
+            </div>
+            <button
+              type="button"
+              class="bookmark-btn"
+              data-action="bookmark-question"
+              aria-label="Bookmark this question"
+              title="Bookmark"
+              style="padding:0.4rem 0.6rem; border-radius:0.5rem; border:1px solid var(--color-border); background: var(--color-surface);"
+            >
+              <span aria-hidden="true">⭐</span>
+            </button>
+          </div>
+
+          <p class="question-text mt-4" id="questionText" data-hook="question-text">
+            Question text will appear here.
+          </p>
+
+          <!-- Answer options -->
+          <div class="answer-options mt-4" role="group" aria-label="Answer options" data-hook="answer-options">
+            <button class="answer-btn" type="button" data-answer="A" data-action="select-answer" aria-label="Answer A">
+              <span class="answer-letter" aria-hidden="true" style="font-weight:800; margin-right:0.5rem;">A</span>
+              <span class="answer-text" data-hook="answer-a">Answer A</span>
+            </button>
+            <button class="answer-btn" type="button" data-answer="B" data-action="select-answer" aria-label="Answer B">
+              <span class="answer-letter" aria-hidden="true" style="font-weight:800; margin-right:0.5rem;">B</span>
+              <span class="answer-text" data-hook="answer-b">Answer B</span>
+            </button>
+            <button class="answer-btn" type="button" data-answer="C" data-action="select-answer" aria-label="Answer C">
+              <span class="answer-letter" aria-hidden="true" style="font-weight:800; margin-right:0.5rem;">C</span>
+              <span class="answer-text" data-hook="answer-c">Answer C</span>
+            </button>
+            <button class="answer-btn" type="button" data-answer="D" data-action="select-answer" aria-label="Answer D">
+              <span class="answer-letter" aria-hidden="true" style="font-weight:800; margin-right:0.5rem;">D</span>
+              <span class="answer-text" data-hook="answer-d">Answer D</span>
+            </button>
+          </div>
+
+          <!-- Feedback area (shown after selection) -->
+          <div class="feedback-area mt-4" data-hook="feedback-area" role="status" aria-live="polite" hidden>
+            <div class="feedback-correct" data-hook="feedback-correct" hidden>
+              <strong>✓ Correct!</strong>
+            </div>
+            <div class="feedback-incorrect" data-hook="feedback-incorrect" hidden>
+              <strong>✕ Incorrect</strong>
+            </div>
+            <p class="explanation-text mt-2" id="explanationText" data-hook="explanation-text">
+              Explanation will appear here.
+            </p>
+          </div>
+
+          <!-- Quiz navigation -->
+          <div class="quiz-navigation mt-6" aria-label="Quiz navigation" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <button
+              type="button"
+              class="action-btn action-btn-tertiary"
+              data-action="previous-question"
+              aria-label="Previous question"
+              id="btnPrev"
+              data-hook="btn-prev"
+              disabled
+              style="padding:0.75rem 1rem; width:100%; justify-content:center; opacity:0.95;"
+            >
+              <span class="action-icon" aria-hidden="true">⬅️</span>
+              <span class="action-text"><strong>Previous</strong><span>Go back</span></span>
+            </button>
+
+            <button
+              type="button"
+              class="action-btn action-btn-secondary"
+              data-action="next-question"
+              aria-label="Next question"
+              id="btnNext"
+              data-hook="btn-next"
+              disabled
+              style="padding:0.75rem 1rem; width:100%; justify-content:center;"
+            >
+              <span class="action-icon" aria-hidden="true">➡️</span>
+              <span class="action-text"><strong>Next</strong><span>Continue</span></span>
+            </button>
+
+            <button
+              type="button"
+              class="action-btn action-btn-primary"
+              data-action="submit-quiz"
+              aria-label="Submit quiz"
+              id="btnSubmit"
+              data-hook="btn-submit"
+              hidden
+              style="padding:0.75rem 1rem; width:100%; justify-content:center;"
+            >
+              <span class="action-icon" aria-hidden="true">✅</span>
+              <span class="action-text"><strong>Submit Quiz</strong><span>Finish and score</span></span>
+            </button>
+          </div>
+
+          <!-- Sample question structure (for reference only; populated by JS) -->
+          <!--
+          <div class="question-container" data-question-id="q123">
+            <div class="question-header">
+              <span class="question-number">Question 5 of 25</span>
+              <button class="bookmark-btn" data-action="bookmark-question" aria-label="Bookmark this question">
+                ⭐
+              </button>
+            </div>
+            
+            <p class="question-text">
+              A 45-year-old patient presents with chest pain radiating to the left arm. 
+              What is the most appropriate initial intervention?
+            </p>
+            
+            <div class="answer-options">
+              <button class="answer-btn" data-answer="A" data-action="select-answer">
+                <span class="answer-letter">A</span>
+                <span class="answer-text">Administer aspirin</span>
+              </button>
+              <button class="answer-btn" data-answer="B" data-action="select-answer">
+                <span class="answer-letter">B</span>
+                <span class="answer-text">Obtain chest X-ray</span>
+              </button>
+              <button class="answer-btn" data-answer="C" data-action="select-answer">
+                <span class="answer-letter">C</span>
+                <span class="answer-text">Start IV fluids</span>
+              </button>
+              <button class="answer-btn" data-answer="D" data-action="select-answer">
+                <span class="answer-letter">D</span>
+                <span class="answer-text">Discharge home</span>
+              </button>
+            </div>
+            
+            <div class="feedback-area" style="display: none;">
+              <div class="feedback-correct">
+                <strong>✓ Correct!</strong>
+              </div>
+              <p class="explanation-text">
+                Aspirin is the first-line treatment for suspected acute coronary syndrome...
+              </p>
+            </div>
+          </div>
+          -->
+        </article>
+      </section>
+
+      <!-- ==========================================================
+           3) RESULTS SCREEN (HIDDEN BY DEFAULT)
+           - data-hook="quiz-results"
+           ========================================================== -->
+      <section
+        class="quiz-results-screen"
+        data-hook="quiz-results"
+        aria-label="Quiz results"
+        hidden
+      >
+        <article class="stat-card" aria-label="Results summary">
+          <div class="stat-content">
+            <h2 class="section-title">Results</h2>
+            <p class="section-subtitle" id="resultsAnnouncement" role="status" aria-live="polite" data-hook="results-announcement">
+              Your results will appear here after you submit the quiz.
+            </p>
+
+            <!-- Score -->
+            <div class="results-score mt-6" aria-label="Final score">
+              <div class="stat-label">Final Score</div>
+              <div class="stat-value" id="finalScorePercent" data-hook="final-score-percent" style="font-size:2.25rem;">
+                0%
+              </div>
+              <div class="section-subtitle" id="finalScoreFraction" data-hook="final-score-fraction">
+                0 / 0 correct
+              </div>
+              <div class="performance-message mt-2" id="performanceMessage" data-hook="performance-message" aria-live="polite">
+                Performance message will appear here.
+              </div>
+            </div>
+
+            <!-- Breakdown -->
+            <div class="results-breakdown mt-6" aria-label="Score breakdown">
+              <h3 class="stat-label">Breakdown</h3>
+              <ul class="mt-2" style="display:grid; gap:0.4rem; color: var(--color-text);">
+                <li>Total questions: <strong id="resultsTotal" data-hook="results-total">0</strong></li>
+                <li>Correct: <strong id="resultsCorrect" data-hook="results-correct">0</strong></li>
+                <li>Incorrect: <strong id="resultsIncorrect" data-hook="results-incorrect">0</strong></li>
+                <li>Time taken: <strong id="resultsTime" data-hook="results-time">—</strong></li>
+              </ul>
+            </div>
+
+            <!-- Category performance (if applicable) -->
+            <div class="mt-6" aria-label="Category performance breakdown">
+              <h3 class="stat-label">Category Performance</h3>
+              <p class="section-subtitle mt-2">
+                If your quiz included multiple categories, this section will show per-category accuracy.
+              </p>
+              <div id="categoryBreakdown" data-hook="category-breakdown" class="mt-2" role="region" aria-label="Category breakdown">
+                <!-- JS will populate -->
+                <p style="color: var(--color-text-muted);">No category breakdown available.</p>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-6" role="group" aria-label="Result actions" style="display:grid; gap:0.75rem;">
+              <button
+                type="button"
+                class="action-btn action-btn-secondary"
+                data-action="review-incorrect"
+                aria-label="Review incorrect answers"
+                style="padding:0.9rem 1rem; width:100%; justify-content:center;"
+              >
+                <span class="action-icon" aria-hidden="true">🧾</span>
+                <span class="action-text"><strong>Review Incorrect Answers</strong><span>Focus your remediation</span></span>
+              </button>
+
+              <button
+                type="button"
+                class="action-btn action-btn-tertiary"
+                data-action="review-all"
+                aria-label="Review all answers"
+                style="padding:0.9rem 1rem; width:100%; justify-content:center;"
+              >
+                <span class="action-icon" aria-hidden="true">📚</span>
+                <span class="action-text"><strong>Review All Answers</strong><span>Full answer key</span></span>
+              </button>
+
+              <button
+                type="button"
+                class="action-btn action-btn-primary"
+                data-action="retake-quiz"
+                aria-label="Retake quiz"
+                style="padding:0.9rem 1rem; width:100%; justify-content:center;"
+              >
+                <span class="action-icon" aria-hidden="true">🔁</span>
+                <span class="action-text"><strong>Retake Quiz</strong><span>Try again</span></span>
+              </button>
+
+              <a
+                class="action-btn action-btn-tertiary"
+                href="index.html"
+                data-action="back-dashboard"
+                aria-label="Back to dashboard"
+                style="padding:0.9rem 1rem; width:100%; justify-content:center; display:flex;"
+              >
+                <span class="action-icon" aria-hidden="true">🏠</span>
+                <span class="action-text"><strong>Back to Dashboard</strong><span>Return home</span></span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================
+       Footer (shared)
+       ========================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copyright">
+          &copy; <span id="copyrightYear" data-hook="copyright-year">2025</span>
+          CEN Exam Prep Pro. All rights reserved.
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a class="footer-link" href="index.html" data-nav="footer-home">Home</a>
+          <a class="footer-link" href="study.html" data-nav="footer-study">Study Guides</a>
+          <a class="footer-link" href="quiz.html" data-nav="footer-quiz">Practice Quiz</a>
+          <a class="footer-link" href="flashcards.html" data-nav="footer-flashcards">Flashcards</a>
+          <a class="footer-link" href="progress.html" data-nav="footer-progress">Progress</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       Notes for developers:
+       - Initial state:
+         * Setup screen visible
+         * Interface/results hidden
+       - JS should toggle:
+         * [data-hook="quiz-setup"] hidden = true/false
+         * [data-hook="quiz-interface"] hidden = true/false
+         * [data-hook="quiz-results"] hidden = true/false
+       - Answer buttons will be decorated by JS with:
+         * .selected, .correct, .incorrect
+         * data-correct="true|false"
+       ========================================================== -->
+</body>
+</html>

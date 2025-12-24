@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- SEO -->
+  <title>CEN Exam Prep Pro | Dashboard</title>
+  <meta name="description" content="CEN Exam Prep Pro dashboard: track study streak, practice questions, categories, and recommended next steps for Certified Emergency Nurse exam prep." />
+  <meta name="keywords" content="CEN, Certified Emergency Nurse, exam prep, emergency nursing, practice questions, flashcards, study guide, quiz" />
+  <meta name="author" content="CEN Exam Prep Pro" />
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#2563eb" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- JS configuration & app logic -->
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body data-page="dashboard">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand -->
+        <div class="brand">
+          <a href="index.html" class="brand-link" data-nav="home">
+            <span class="brand-icon">🏥</span>
+            <span class="brand-title">CEN Exam Prep Pro</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button 
+          class="nav-toggle" 
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          data-action="toggle-nav"
+        >
+          <span class="nav-toggle-icon">☰</span>
+        </button>
+
+        <!-- Primary navigation -->
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav-list" id="primary-nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active" aria-current="page" data-nav="home">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="study.html" class="nav-link" data-nav="study-guides">
+                <span class="nav-icon">📚</span>
+                <span>Study Guides</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="quiz.html" class="nav-link" data-nav="practice-quiz">
+                <span class="nav-icon">✏️</span>
+                <span>Practice Quiz</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="flashcards.html" class="nav-link" data-nav="flashcards">
+                <span class="nav-icon">🎴</span>
+                <span>Flashcards</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link" data-nav="progress">
+                <span class="nav-icon">📊</span>
+                <span>Progress</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="site-main" role="main">
+    
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">
+            Welcome back, <span id="userName" data-hook="user-name">Nurse</span>!
+          </h1>
+          <p class="hero-subtitle">
+            Build confidence for the CEN exam with targeted practice, spaced repetition, and category-based review.
+          </p>
+        </div>
+        
+        <!-- Exam countdown -->
+        <div class="countdown-card" role="status" aria-live="polite">
+          <div class="countdown-label">Exam Countdown</div>
+          <div class="countdown-value" id="examCountdown" data-hook="exam-countdown">
+            Set your exam date
+          </div>
+          <button class="countdown-set-btn" data-action="set-exam-date">
+            Set Date
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD STATS -->
+    <section class="dashboard-stats" aria-label="Study statistics">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <!-- Total Questions Practiced -->
+          <div class="stat-card" data-stat="total-questions">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-label">Questions Practiced</div>
+              <div class="stat-value" id="totalQuestions" data-hook="total-questions">0</div>
+            </div>
+          </div>
+
+          <!-- Study Streak -->
+          <div class="stat-card" data-stat="study-streak">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-content">
+              <div class="stat-label">Study Streak</div>
+              <div class="stat-value">
+                <span id="studyStreak" data-hook="study-streak">0</span> days
+              </div>
+            </div>
+          </div>
+
+          <!-- Weakest Category -->
+          <div class="stat-card" data-stat="weakest-category">
+            <div class="stat-icon">⚠️</div>
+            <div class="stat-content">
+              <div class="stat-label">Needs Focus</div>
+              <div class="stat-value" id="weakestCategory" data-hook="weakest-category">
+                Start practicing
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended Study -->
+          <div class="stat-card" data-stat="recommended">
+            <div class="stat-icon">💡</div>
+            <div class="stat-content">
+              <div class="stat-label">Recommended</div>
+              <div class="stat-value" id="recommendedStudy" data-hook="recommended-study">
+                Take a quiz
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <section class="quick-actions" aria-label="Quick actions">
+      <div class="container">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="actions-grid">
+          
+          <button class="action-btn action-btn-primary" data-action="start-random-quiz">
+            <span class="action-icon">🎲</span>
+            <span class="action-text">Start Random Quiz</span>
+          </button>
+
+          <button class="action-btn action-btn-secondary" data-action="review-flashcards">
+            <span class="action-icon">🎴</span>
+            <span class="action-text">Review Flashcards</span>
+          </button>
+
+          <button class="action-btn action-btn-tertiary" data-action="continue-session">
+            <span class="action-icon">▶️</span>
+            <span class="action-text">Continue Last Session</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY CATEGORIES -->
+    <section class="study-categories" aria-label="Study categories">
+      <div class="container">
+        <h2 class="section-title">Study by Category</h2>
+        <p class="section-subtitle">Choose a category to focus your study session</p>
+        
+        <div class="categories-grid">
+          
+          <!-- Cardiovascular -->
+          <div class="category-card" data-category="cardiovascular">
+            <div class="category-header">
+              <span class="category-icon">❤️</span>
+              <h3 class="category-title">Cardiovascular</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-cardiovascular">0%</span>
+              <span class="category-count" data-hook="count-cardiovascular">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="cardiovascular">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Respiratory -->
+          <div class="category-card" data-category="respiratory">
+            <div class="category-header">
+              <span class="category-icon">🫁</span>
+              <h3 class="category-title">Respiratory</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-respiratory">0%</span>
+              <span class="category-count" data-hook="count-respiratory">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="respiratory">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Trauma -->
+          <div class="category-card" data-category="trauma">
+            <div class="category-header">
+              <span class="category-icon">🚑</span>
+              <h3 class="category-title">Trauma</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-trauma">0%</span>
+              <span class="category-count" data-hook="count-trauma">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="trauma">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Neurological -->
+          <div class="category-card" data-category="neurological">
+            <div class="category-header">
+              <span class="category-icon">🧠</span>
+              <h3 class="category-title">Neurological</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-neurological">0%</span>
+              <span class="category-count" data-hook="count-neurological">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="neurological">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Gastrointestinal -->
+          <div class="category-card" data-category="gastrointestinal">
+            <div class="category-header">
+              <span class="category-icon">🫃</span>
+              <h3 class="category-title">Gastrointestinal</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-gastrointestinal">0%</span>
+              <span class="category-count" data-hook="count-gastrointestinal">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="gastrointestinal">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Genitourinary/Gynecology/Obstetrical -->
+          <div class="category-card" data-category="genitourinary">
+            <div class="category-header">
+              <span class="category-icon">🩺</span>
+              <h3 class="category-title">GU/GYN/OB</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-genitourinary">0%</span>
+              <span class="category-count" data-hook="count-genitourinary">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="genitourinary">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Psychosocial -->
+          <div class="category-card" data-category="psychosocial">
+            <div class="category-header">
+              <span class="category-icon">🧘</span>
+              <h3 class="category-title">Psychosocial</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-psychosocial">0%</span>
+              <span class="category-count" data-hook="count-psychosocial">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="psychosocial">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Medical -->
+          <div class="category-card" data-category="medical">
+            <div class="category-header">
+              <span class="category-icon">💊</span>
+              <h3 class="category-title">Medical</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-medical">0%</span>
+              <span class="category-count" data-hook="count-medical">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="medical">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Maxillofacial/Ocular/Orthopedic/Wound -->
+          <div class="category-card" data-category="maxillofacial">
+            <div class="category-header">
+              <span class="category-icon">🦴</span>
+              <h3 class="category-title">Max/Ocular/Ortho</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-maxillofacial">0%</span>
+              <span class="category-count" data-hook="count-maxillofacial">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="maxillofacial">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Environment/Toxicology -->
+          <div class="category-card" data-category="environmental">
+            <div class="category-header">
+              <span class="category-icon">☠️</span>
+              <h3 class="category-title">Environment/Tox</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-environmental">0%</span>
+              <span class="category-count" data-hook="count-environmental">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="environmental">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Professional Issues -->
+          <div class="category-card" data-category="professional">
+            <div class="category-header">
+              <span class="category-icon">👔</span>
+              <h3 class="category-title">Professional Issues</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-professional">0%</span>
+              <span class="category-count" data-hook="count-professional">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="professional">
+              Study Now
+            </button>
+          </div>
+
+          <!-- System/Disaster/Triage -->
+          <div class="category-card" data-category="disaster">
+            <div class="category-header">
+              <span class="category-icon">🚨</span>
+              <h3 class="category-title">Disaster/Triage</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-disaster">0%</span>
+              <span class="category-count" data-hook="count-disaster">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="disaster">
+              Study Now
+            </button>
+          </div>
+
+          <!-- Special Populations -->
+          <div class="category-card" data-category="special-populations">
+            <div class="category-header">
+              <span class="category-icon">👶</span>
+              <h3 class="category-title">Special Populations</h3>
+            </div>
+            <div class="category-stats">
+              <span class="category-progress" data-hook="progress-special-populations">0%</span>
+              <span class="category-count" data-hook="count-special-populations">0 questions</span>
+            </div>
+            <button class="category-btn" data-action="study-category" data-category-id="special-populations">
+              Study Now
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copyright">
+          &copy; 2025 CEN Exam Prep Pro. Built with ❤️ for Emergency Nurses.
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

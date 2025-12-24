@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    CEN Exam Prep Pro - Flashcards Page (flashcards.html)
+    - Matches shared header/nav/footer structure and CSS class naming
+    - Flashcard UI is interactive (flip, next/prev, shuffle, filter)
+    - CSS will handle the flip animation; JS will toggle .flipped and populate content
+  -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>CEN Exam Prep Pro | Flashcards</title>
+  <meta name="description" content="Study CEN topics with interactive flashcards. Filter by category, shuffle, use auto-play, and mark cards as known or review." />
+  <meta name="keywords" content="CEN flashcards, emergency nursing, spaced repetition, CEN exam prep, study cards" />
+  <meta name="author" content="CEN Exam Prep Pro" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- App JS -->
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/flashcards.js" defer></script>
+</head>
+
+<body data-page="flashcards">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================
+       Header + Primary Navigation (shared)
+       ========================= -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand -->
+        <div class="brand" aria-label="CEN Exam Prep Pro home">
+          <a class="brand-link" href="index.html" data-nav="home" aria-label="Go to CEN Exam Prep Pro home">
+            <span class="brand-icon" aria-hidden="true">🏥</span>
+            <span class="brand-title">CEN Exam Prep Pro</span>
+          </a>
+        </div>
+
+        <!-- Mobile nav toggle -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          data-action="toggle-nav"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <!-- Primary navigation -->
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-nav="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="study.html" data-nav="study-guides">Study Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html" data-nav="practice-quiz">Practice Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="flashcards.html" aria-current="page" data-nav="flashcards">Flashcards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="progress.html" data-nav="progress">Progress</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+       Main Content
+       ========================= -->
+  <main id="main" class="site-main" role="main">
+    <div class="container">
+      <!-- =========================
+           Page Header
+           ========================= -->
+      <header class="flashcard-page-header" aria-label="Flashcards page header">
+        <h1 class="section-title">Flashcards</h1>
+        <p class="section-subtitle">
+          Reinforce high-yield concepts with interactive flip cards. Filter by category, shuffle the deck,
+          use auto-play, and tag cards as Known or Review.
+        </p>
+      </header>
+
+      <!-- =========================
+           Controls
+           ========================= -->
+      <section class="flashcard-controls" aria-label="Flashcard controls">
+        <article class="stat-card" aria-label="Flashcard control panel">
+          <div class="stat-content">
+            <h2 class="stat-label">Controls</h2>
+            <p class="section-subtitle mt-2">
+              Tip: Use <strong>Space</strong> to flip, and <strong>←/→</strong> to navigate (JS will implement keyboard shortcuts).
+            </p>
+
+            <div class="actions-grid mt-4" aria-label="Primary flashcard controls">
+              <!-- Category Filter -->
+              <div class="action-btn action-btn-secondary category-filter" role="group" aria-label="Category filter">
+                <div class="action-icon" aria-hidden="true">🗂️</div>
+                <div class="action-text">
+                  <strong>Category</strong>
+                  <label class="sr-only" for="flashcardCategory">Filter by category</label>
+                  <select
+                    id="flashcardCategory"
+                    data-action="filter-category"
+                    aria-label="Filter flashcards by category"
+                    style="margin-top: 0.35rem; width: 100%; padding: 0.6rem 0.7rem; border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.10); color: #fff;"
+                  >
+                    <option value="all" selected>All Categories</option>
+                    <option value="cardiovascular">Cardiovascular</option>
+                    <option value="respiratory">Respiratory</option>
+                    <option value="trauma">Trauma</option>
+                    <option value="neurological">Neurological</option>
+                    <option value="gastrointestinal">Gastrointestinal</option>
+                    <option value="genitourinary-gynecology-obstetrical">Genitourinary/Gynecology/Obstetrical</option>
+                    <option value="psychosocial">Psychosocial</option>
+                    <option value="medical">Medical</option>
+                    <option value="maxillofacial-ocular-orthopedic-wound">Maxillofacial/Ocular/Orthopedic/Wound</option>
+                    <option value="environment-toxicology">Environment/Toxicology</option>
+                    <option value="professional-issues">Professional Issues</option>
+                    <option value="system-disaster-triage">System/Disaster/Triage</option>
+                    <option value="special-populations">Special Populations</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Shuffle -->
+              <button
+                type="button"
+                class="action-btn action-btn-primary"
+                data-action="shuffle-cards"
+                aria-label="Shuffle flashcards"
+              >
+                <span class="action-icon" aria-hidden="true">🔀</span>
+                <span class="action-text"><strong>Shuffle</strong><span>Randomize deck</span></span>
+              </button>
+
+              <!-- Auto-play toggle -->
+              <button
+                type="button"
+                class="action-btn action-btn-tertiary"
+                data-action="toggle-autoplay"
+                aria-label="Toggle auto-play"
+                aria-pressed="false"
+              >
+                <span class="action-icon" aria-hidden="true">⏯️</span>
+                <span class="action-text"><strong>Auto-play</strong><span id="autoplayStatus" data-hook="autoplay-status">Off</span></span>
+              </button>
+            </div>
+
+            <div class="actions-grid mt-4" aria-label="Secondary flashcard controls">
+              <!-- Speed control -->
+              <div class="action-btn action-btn-tertiary control-group" role="group" aria-label="Auto-play speed">
+                <div class="action-icon" aria-hidden="true">⚡</div>
+                <div class="action-text">
+                  <strong>Speed</strong>
+                  <label class="sr-only" for="autoplaySpeed">Auto-play speed</label>
+                  <select
+                    id="autoplaySpeed"
+                    data-filter="autoplay-speed"
+                    aria-label="Select auto-play speed"
+                    style="margin-top: 0.35rem; width: 100%; padding: 0.6rem 0.7rem; border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.10); color: #fff;"
+                  >
+                    <option value="slow">Slow</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="fast">Fast</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Mark Known -->
+              <button
+                type="button"
+                class="action-btn action-btn-secondary"
+                data-action="mark-known"
+                aria-label="Mark this card as known"
+              >
+                <span class="action-icon" aria-hidden="true">✅</span>
+                <span class="action-text"><strong>Known</strong><span>Mark as mastered</span></span>
+              </button>
+
+              <!-- Mark Review -->
+              <button
+                type="button"
+                class="action-btn action-btn-primary"
+                data-action="mark-review"
+                aria-label="Mark this card for review"
+              >
+                <span class="action-icon" aria-hidden="true">📝</span>
+                <span class="action-text"><strong>Review</strong><span>Queue again soon</span></span>
+              </button>
+            </div>
+
+            <div class="mt-4" style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; justify-content:space-between;">
+              <button
+                type="button"
+                class="action-btn action-btn-tertiary"
+                data-action="reset-progress"
+                aria-label="Reset flashcard progress"
+                style="padding:0.75rem 1rem; width:auto;"
+              >
+                <span class="action-icon" aria-hidden="true">♻️</span>
+                <span class="action-text"><strong>Reset</strong><span>Clear session</span></span>
+              </button>
+
+              <div id="flashcardStatus" data-hook="flashcard-status" role="status" aria-live="polite" style="color: var(--color-text-muted);">
+                Select a category to begin (or keep All Categories).
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- =========================
+           Flashcard Display Area
+           ========================= -->
+      <section class="flashcard-container" data-hook="flashcard-container" aria-label="Flashcard viewer">
+        <!-- Progress indicator -->
+        <div class="card-progress mt-4" aria-label="Flashcard progress" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+          <div>
+            <span class="stat-label">Progress</span>
+            <div class="stat-value" style="font-size:1.25rem;">
+              <span data-hook="card-number" id="cardNumber">Card 0 of 0</span>
+            </div>
+          </div>
+
+          <!-- Visual progress bar -->
+          <div style="flex: 1 1 280px; min-width: 220px;">
+            <div
+              class="quiz-progress-bar"
+              aria-label="Flashcard progress bar"
+              style="height: 10px; background: var(--color-border); border-radius: 999px; overflow:hidden;"
+            >
+              <div
+                data-hook="progress-bar"
+                id="flashcardProgressFill"
+                style="height: 100%; width: 0%; background: var(--color-primary); transition: width var(--transition);"
+              ></div>
+            </div>
+          </div>
+
+          <div aria-label="Current category">
+            <span class="stat-label">Category</span>
+            <div class="stat-value" style="font-size:1.25rem;">
+              <span data-hook="category-badge" id="categoryBadge">All Categories</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard (flip target)
+             - JS toggles .flipped
+             - data-action="flip-card" and keyboard handlers recommended
+        -->
+        <article
+          class="flashcard stat-card mt-4"
+          data-action="flip-card"
+          data-card-id="placeholder"
+          tabindex="0"
+          role="button"
+          aria-label="Flashcard. Activate to flip."
+          aria-pressed="false"
+        >
+          <div class="card-inner" aria-hidden="false">
+            <!-- Front -->
+            <div class="card-front" data-hook="card-front">
+              <div class="card-header" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                <span class="category-badge" data-hook="category-badge-front" style="font-weight:800; color: var(--color-primary-dark);">
+                  All Categories
+                </span>
+                <span class="card-number" data-hook="card-number-front" style="color: var(--color-text-muted);">
+                  Card 0 of 0
+                </span>
+              </div>
+
+              <div class="card-content mt-4">
+                <p class="card-question" style="font-size:1.1rem; font-weight:800; color: var(--color-text);">
+                  Welcome to Flashcards
+                </p>
+                <p class="section-subtitle mt-2">
+                  Select a category from the dropdown above (or keep <strong>All Categories</strong>) to load your deck.
+                </p>
+              </div>
+
+              <div class="flip-indicator mt-6" aria-label="Flip instruction" style="color: var(--color-text-muted); font-weight:700;">
+                <span>Click or tap to flip ↻</span>
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div class="card-back" data-hook="card-back" hidden>
+              <div class="card-header" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                <span class="category-badge" data-hook="category-badge-back" style="font-weight:800; color: var(--color-primary-dark);">
+                  All Categories
+                </span>
+                <span class="card-number" data-hook="card-number-back" style="color: var(--color-text-muted);">
+                  Card 0 of 0
+                </span>
+              </div>
+
+              <div class="card-content mt-4">
+                <p class="card-answer" style="color: var(--color-text);">
+                  <strong>How to use:</strong> Flip the card to reveal answers/definitions. Use Previous/Next to navigate.
+                  Mark cards as <strong>Known</strong> or <strong>Review</strong> to shape your session.
+                </p>
+              </div>
+
+              <div class="flip-indicator mt-6" aria-label="Flip instruction" style="color: var(--color-text-muted); font-weight:700;">
+                <span>Click or tap to flip ↻</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Navigation + Jump -->
+        <div class="card-navigation mt-6" aria-label="Flashcard navigation" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <button
+            type="button"
+            class="action-btn action-btn-tertiary"
+            data-action="previous-card"
+            aria-label="Previous card"
+            id="btnPrevCard"
+            style="padding:0.75rem 1rem; width:100%; justify-content:center;"
+          >
+            <span class="action-icon" aria-hidden="true">⬅️</span>
+            <span class="action-text"><strong>Previous</strong><span>Go back</span></span>
+          </button>
+
+          <button
+            type="button"
+            class="action-btn action-btn-secondary"
+            data-action="next-card"
+            aria-label="Next card"
+            id="btnNextCard"
+            style="padding:0.75rem 1rem; width:100%; justify-content:center;"
+          >
+            <span class="action-icon" aria-hidden="true">➡️</span>
+            <span class="action-text"><strong>Next</strong><span>Continue</span></span>
+          </button>
+
+          <button
+            type="button"
+            class="action-btn action-btn-primary"
+            data-action="shuffle-cards"
+            aria-label="Shuffle cards"
+            style="padding:0.75rem 1rem; width:100%; justify-content:center;"
+          >
+            <span class="action-icon" aria-hidden="true">🔀</span>
+            <span class="action-text"><strong>Shuffle</strong><span>Random order</span></span>
+          </button>
+        </div>
+
+        <div class="card-actions mt-4" aria-label="Jump to card" style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+          <label for="jumpToCard" class="stat-label" style="margin:0;">Go to card #</label>
+          <input
+            id="jumpToCard"
+            type="number"
+            min="1"
+            step="1"
+            inputmode="numeric"
+            aria-label="Jump to card number"
+            data-action="jump-to-card"
+            style="flex: 1 1 140px; padding: 0.7rem 0.8rem; border-radius: 0.5rem; border: 1px solid var(--color-border); background: var(--color-surface);"
+          />
+          <button
+            type="button"
+            class="action-btn action-btn-tertiary"
+            data-action="go-to-card"
+            aria-label="Go to selected card"
+            style="padding:0.75rem 1rem; width:auto;"
+          >
+            <span class="action-icon" aria-hidden="true">🎯</span>
+            <span class="action-text"><strong>Go</strong><span>Jump</span></span>
+          </button>
+        </div>
+
+        <!-- Sample Flashcard structure (for reference; populated by JS) -->
+        <!--
+        <div class="flashcard" data-card-id="card123" data-action="flip-card">
+          <div class="card-inner">
+            <div class="card-front" data-hook="card-front">
+              <div class="card-header">
+                <span class="category-badge" data-hook="category-badge">Cardiovascular</span>
+                <span class="card-number" data-hook="card-number">Card 5 of 50</span>
+              </div>
+              <div class="card-content">
+                <p class="card-question">What is the first-line treatment for acute MI?</p>
+              </div>
+              <div class="flip-indicator">
+                <span>Click to flip ↻</span>
+              </div>
+            </div>
+            
+            <div class="card-back" data-hook="card-back">
+              <div class="card-header">
+                <span class="category-badge">Cardiovascular</span>
+                <span class="card-number">Card 5 of 50</span>
+              </div>
+              <div class="card-content">
+                <p class="card-answer"><strong>Answer:</strong> Aspirin 325mg PO, oxygen if SpO2 &lt;90%, nitroglycerin SL, morphine for pain, and immediate ECG.</p>
+                <p class="card-rationale"><strong>Key Point:</strong> MONA protocol - Morphine, Oxygen, Nitroglycerin, Aspirin</p>
+              </div>
+              <div class="flip-indicator">
+                <span>Click to flip ↻</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================
+       Footer (shared)
+       ========================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copyright">
+          &copy; <span id="copyrightYear" data-hook="copyright-year">2025</span>
+          CEN Exam Prep Pro. All rights reserved.
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a class="footer-link" href="index.html" data-nav="footer-home">Home</a>
+          <a class="footer-link" href="study.html" data-nav="footer-study">Study Guides</a>
+          <a class="footer-link" href="quiz.html" data-nav="footer-quiz">Practice Quiz</a>
+          <a class="footer-link" href="flashcards.html" data-nav="footer-flashcards">Flashcards</a>
+          <a class="footer-link" href="progress.html" data-nav="footer-progress">Progress</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
