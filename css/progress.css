@@ -1,0 +1,603 @@
+/**
+ * CEN Exam Prep - Progress Styles
+ * 
+ * Charts, statistics, and progress visualization
+ */
+
+/* ==================== Progress Container ==================== */
+
+.progress-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.progress-header {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.progress-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ==================== Overview Stats ==================== */
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ==================== Category Progress ==================== */
+
+.category-progress {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.category-progress h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.category-progress-item {
+    background: var(--background-light);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.category-progress-item:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.category-header h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.category-weight {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+.category-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.category-stats .stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-stats .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.category-stats .stat-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.progress-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.category-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* ==================== Quiz History ==================== */
+
+.quiz-history {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-history h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.quiz-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quiz-history-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 10px;
+    border-left: 4px solid var(--success-color);
+    transition: all 0.3s ease;
+}
+
+.quiz-history-item:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
+}
+
+.quiz-history-item.failed {
+    border-left-color: var(--danger-color);
+}
+
+.quiz-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.quiz-info {
+    flex: 1;
+}
+
+.quiz-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.quiz-title strong {
+    color: var(--text-color);
+}
+
+.quiz-category {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+.quiz-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.quiz-score {
+    text-align: right;
+}
+
+.score-percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+.score-detail {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.quiz-time {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ==================== Quiz Chart ==================== */
+
+.quiz-chart {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.quiz-chart h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.chart-container {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.chart {
+    width: 100%;
+    height: auto;
+}
+
+/* ==================== Study Streak ==================== */
+
+.study-streak {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.study-streak h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.streak-display {
+    margin: 2rem 0;
+}
+
+.streak-number {
+    font-size: 5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.streak-label {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.streak-status {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+.streak-status.success {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.streak-status.warning {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.streak-status.info {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+/* ==================== Streak Calendar ==================== */
+
+.streak-calendar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 10px;
+    min-width: 60px;
+    transition: all 0.3s ease;
+}
+
+.calendar-day.active {
+    background: linear-gradient(135deg, var(--success-color), #10b981);
+    color: white;
+    transform: scale(1.05);
+}
+
+.day-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.day-indicator {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ==================== Flashcard Stats ==================== */
+
+.flashcard-stats {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.flashcard-stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.flashcard-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.flashcard-stat {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.flashcard-stat:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.flashcard-action {
+    text-align: center;
+}
+
+/* ==================== Empty State ==================== */
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== Data Management ==================== */
+
+.data-management {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.data-management h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.data-management p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.data-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ==================== Responsive Design ==================== */
+
+@media (max-width: 768px) {
+    .progress-container {
+        padding: 1rem;
+    }
+
+    .overview-stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .category-progress,
+    .quiz-history,
+    .study-streak,
+    .flashcard-stats {
+        padding: 1.5rem;
+    }
+
+    .quiz-history-item {
+        flex-wrap: wrap;
+    }
+
+    .quiz-score {
+        width: 100%;
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+
+    .streak-number {
+        font-size: 4rem;
+    }
+
+    .streak-calendar {
+        gap: 0.25rem;
+    }
+
+    .calendar-day {
+        min-width: 50px;
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .category-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .data-actions {
+        flex-direction: column;
+    }
+
+    .data-actions .btn {
+        width: 100%;
+    }
+
+    .streak-calendar {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==================== Print Styles ==================== */
+
+@media print {
+    .progress-container {
+        padding: 0;
+    }
+
+    .category-actions,
+    .data-management,
+    .btn {
+        display: none;
+    }
+
+    .stat-card,
+    .category-progress-item,
+    .quiz-history-item {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
