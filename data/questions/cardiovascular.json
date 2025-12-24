@@ -1,0 +1,699 @@
+{
+  "category": "Cardiovascular",
+  "subcategory": "Cardiovascular Emergencies",
+  "examPercentage": 20,
+  "totalQuestions": 50,
+  "lastUpdated": "2025-01-15",
+  "questions": [
+    {
+      "id": "cv001",
+      "question": "A 55-year-old male presents to the ED with crushing substernal chest pain radiating to his left arm for the past 45 minutes. He is diaphoretic and nauseous. Vital signs: BP 90/60, HR 110, RR 22, SpO2 94% on RA. ECG shows ST elevation in leads II, III, and aVF. What is the priority intervention?",
+      "options": [
+        "Administer aspirin 325mg PO",
+        "Obtain cardiac biomarkers",
+        "Activate cardiac catheterization lab",
+        "Administer nitroglycerin 0.4mg SL"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This patient is experiencing an inferior wall STEMI (ST elevation in II, III, aVF indicates right coronary artery occlusion). The priority is to activate the cardiac catheterization lab for emergent percutaneous coronary intervention (PCI). Door-to-balloon time goal is <90 minutes. While aspirin is important and should be given, cath lab activation takes priority. Nitroglycerin is relatively contraindicated with hypotension (BP 90/60) and inferior MI (risk of right ventricular involvement). Biomarkers should not delay reperfusion therapy.",
+      "difficulty": "medium",
+      "tags": ["STEMI", "inferior MI", "PCI", "reperfusion", "chest pain"],
+      "references": ["AHA/ACC STEMI Guidelines 2023", "ENA CEN Review Manual"]
+    },
+    {
+      "id": "cv002",
+      "question": "A 62-year-old female with history of diabetes presents with fatigue, nausea, and mild epigastric discomfort for 6 hours. ECG shows ST depression in V1-V4 with T-wave inversions. Troponin I is 2.4 ng/mL (normal <0.04). What is the most likely diagnosis?",
+      "options": [
+        "Stable angina",
+        "STEMI",
+        "NSTEMI",
+        "Pericarditis"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This patient presents with NSTEMI (Non-ST Elevation Myocardial Infarction). Key findings include: atypical presentation common in diabetics and women (fatigue, nausea, epigastric discomfort rather than classic chest pain), ST depression and T-wave inversions (ischemic changes without ST elevation), and elevated troponin indicating myocardial necrosis. STEMI requires ST elevation. Stable angina does not cause troponin elevation. Pericarditis typically shows diffuse ST elevation and PR depression.",
+      "difficulty": "medium",
+      "tags": ["NSTEMI", "ACS", "atypical presentation", "diabetes", "troponin"],
+      "references": ["AHA/ACC NSTE-ACS Guidelines 2023"]
+    },
+    {
+      "id": "cv003",
+      "question": "Which ECG finding is most specific for acute pericarditis?",
+      "options": [
+        "ST elevation in contiguous leads",
+        "Diffuse ST elevation with PR depression",
+        "Pathological Q waves",
+        "T-wave inversions in V1-V4"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Diffuse ST elevation with PR depression is the hallmark ECG finding of acute pericarditis. Unlike STEMI, pericarditis causes diffuse (widespread) ST elevation that does not follow a coronary artery distribution, along with PR segment depression (especially in lead II) and PR elevation in aVR. Contiguous ST elevation suggests STEMI. Q waves indicate prior infarction. T-wave inversions are nonspecific and can occur in many conditions.",
+      "difficulty": "easy",
+      "tags": ["pericarditis", "ECG", "ST elevation", "PR depression"],
+      "references": ["ESC Pericardial Disease Guidelines 2015"]
+    },
+    {
+      "id": "cv004",
+      "question": "A patient in ventricular fibrillation receives one defibrillation shock. Immediately after the shock, what is the next action according to ACLS guidelines?",
+      "options": [
+        "Check pulse and rhythm",
+        "Resume CPR for 2 minutes",
+        "Administer epinephrine 1mg IV",
+        "Deliver another shock immediately"
+      ],
+      "correctAnswer": 1,
+      "rationale": "According to ACLS guidelines, immediately after delivering a defibrillation shock, CPR should be resumed for 2 minutes (5 cycles) before rechecking rhythm. This allows time for the heart to recover and potentially establish perfusion. Checking pulse immediately after shock wastes valuable time. Epinephrine is given after the second shock (during CPR). Stacked shocks are no longer recommended; single shocks followed by immediate CPR is the current standard.",
+      "difficulty": "easy",
+      "tags": ["ACLS", "ventricular fibrillation", "defibrillation", "CPR", "cardiac arrest"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv005",
+      "question": "A 70-year-old male with acute decompensated heart failure presents with severe respiratory distress. BP 180/110, HR 120, RR 32, SpO2 82% on room air. Lung sounds reveal bilateral crackles to the apices. Which intervention is the highest priority?",
+      "options": [
+        "Administer furosemide 40mg IV",
+        "Apply BiPAP at 10/5 cm H2O",
+        "Administer morphine 2mg IV",
+        "Obtain chest X-ray"
+      ],
+      "correctAnswer": 1,
+      "rationale": "BiPAP (bilevel positive airway pressure) is the priority intervention for acute cardiogenic pulmonary edema with severe respiratory distress. Non-invasive positive pressure ventilation reduces preload, decreases work of breathing, improves oxygenation, and can prevent intubation. The patient's SpO2 of 82% indicates severe hypoxemia requiring immediate respiratory support. Furosemide is important but takes time to work. Morphine use has declined due to potential respiratory depression. Chest X-ray should not delay treatment.",
+      "difficulty": "medium",
+      "tags": ["heart failure", "pulmonary edema", "BiPAP", "respiratory distress", "ADHF"],
+      "references": ["AHA Heart Failure Guidelines 2022"]
+    },
+    {
+      "id": "cv006",
+      "question": "A patient with new-onset atrial fibrillation and rapid ventricular response (HR 156) is hemodynamically unstable with BP 78/50 and altered mental status. What is the appropriate intervention?",
+      "options": [
+        "Administer diltiazem 20mg IV",
+        "Administer amiodarone 150mg IV",
+        "Perform synchronized cardioversion",
+        "Administer adenosine 6mg rapid IV push"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Synchronized cardioversion is indicated for unstable tachyarrhythmias. This patient demonstrates hemodynamic instability (hypotension BP 78/50, altered mental status) requiring immediate intervention. Electrical cardioversion is faster and more reliable than pharmacological approaches in unstable patients. Diltiazem and amiodarone are appropriate for stable patients. Adenosine is used for regular narrow-complex tachycardias (SVT), not atrial fibrillation. Initial energy for A-fib cardioversion is typically 120-200J biphasic.",
+      "difficulty": "medium",
+      "tags": ["atrial fibrillation", "cardioversion", "unstable tachycardia", "ACLS"],
+      "references": ["AHA ACLS Guidelines 2020", "ACC/AHA Atrial Fibrillation Guidelines"]
+    },
+    {
+      "id": "cv007",
+      "question": "A 45-year-old male presents with sudden onset of severe, tearing chest pain radiating to his back. BP in right arm is 180/100 and left arm is 140/80. Chest X-ray shows widened mediastinum. What is the most likely diagnosis?",
+      "options": [
+        "Acute myocardial infarction",
+        "Pulmonary embolism",
+        "Aortic dissection",
+        "Esophageal rupture"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This presentation is classic for aortic dissection: sudden onset severe tearing/ripping pain radiating to back, blood pressure differential >20 mmHg between arms (indicating involvement of subclavian artery), and widened mediastinum on chest X-ray. Type A dissections involve the ascending aorta and are surgical emergencies. MI typically presents with pressure-like pain. PE causes pleuritic pain and dyspnea. Esophageal rupture follows vomiting and causes mediastinal air, not widening.",
+      "difficulty": "medium",
+      "tags": ["aortic dissection", "chest pain", "hypertensive emergency", "widened mediastinum"],
+      "references": ["ACC/AHA Aortic Disease Guidelines 2022"]
+    },
+    {
+      "id": "cv008",
+      "question": "During resuscitation of a cardiac arrest patient, end-tidal CO2 (ETCO2) suddenly increases from 15 mmHg to 45 mmHg. What does this indicate?",
+      "options": [
+        "Endotracheal tube displacement",
+        "Return of spontaneous circulation (ROSC)",
+        "Worsening metabolic acidosis",
+        "Hyperventilation by the provider"
+      ],
+      "correctAnswer": 1,
+      "rationale": "A sudden, sustained increase in ETCO2 during CPR strongly suggests return of spontaneous circulation (ROSC). When the heart resumes effective pumping, CO2 that accumulated in tissues during arrest is delivered to the lungs and exhaled, causing ETCO2 to rise dramatically. ETCO2 <10 mmHg during CPR suggests poor perfusion. Tube displacement would cause ETCO2 to drop. Hyperventilation decreases ETCO2. This is why continuous waveform capnography is recommended during resuscitation.",
+      "difficulty": "medium",
+      "tags": ["ROSC", "ETCO2", "capnography", "cardiac arrest", "CPR quality"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv009",
+      "question": "A patient with suspected cardiac tamponade presents with Beck's triad. Which findings comprise this triad?",
+      "options": [
+        "Hypertension, bradycardia, irregular respirations",
+        "Hypotension, jugular venous distension, muffled heart sounds",
+        "Fever, new murmur, Janeway lesions",
+        "Chest pain, dyspnea, hemoptysis"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Beck's triad for cardiac tamponade consists of: hypotension (decreased cardiac output due to impaired filling), jugular venous distension (JVD - blood backs up due to impaired right heart filling), and muffled/distant heart sounds (fluid around heart dampens sounds). Other signs include pulsus paradoxus (>10 mmHg drop in SBP during inspiration) and electrical alternans on ECG. The first option describes Cushing's triad (increased ICP). The third describes endocarditis. The fourth suggests PE.",
+      "difficulty": "easy",
+      "tags": ["cardiac tamponade", "Beck's triad", "pericardial effusion", "JVD"],
+      "references": ["ENA Emergency Nursing Core Curriculum"]
+    },
+    {
+      "id": "cv010",
+      "question": "A 68-year-old female on warfarin for atrial fibrillation presents with STEMI. Her INR is 3.2. The interventional cardiologist wants to proceed with primary PCI. What is the most appropriate approach?",
+      "options": [
+        "Delay PCI until INR is <2.0",
+        "Administer vitamin K and fresh frozen plasma before PCI",
+        "Proceed with PCI using radial artery access",
+        "Administer thrombolytics instead of PCI"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Primary PCI should not be delayed for STEMI patients on anticoagulation. Radial artery access is preferred over femoral access in anticoagulated patients because it has lower bleeding complications and allows easier hemostasis with compression. Studies show radial access reduces major bleeding and mortality. Delaying reperfusion increases myocardial damage. Reversing anticoagulation takes time and delays treatment. Thrombolytics are contraindicated with elevated INR due to bleeding risk.",
+      "difficulty": "hard",
+      "tags": ["STEMI", "PCI", "anticoagulation", "radial access", "warfarin"],
+      "references": ["ACC/AHA STEMI Guidelines 2023", "RIVAL Trial"]
+    },
+    {
+      "id": "cv011",
+      "question": "A patient presents with regular narrow-complex tachycardia at 180 bpm. Vagal maneuvers are unsuccessful. What is the first-line pharmacological treatment?",
+      "options": [
+        "Amiodarone 150mg IV over 10 minutes",
+        "Adenosine 6mg rapid IV push",
+        "Diltiazem 20mg IV over 2 minutes",
+        "Metoprolol 5mg IV over 5 minutes"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Adenosine 6mg rapid IV push is the first-line drug for regular narrow-complex tachycardia (SVT) after vagal maneuvers fail. Adenosine causes transient AV nodal block, interrupting the reentrant circuit. It must be given rapidly through a large proximal vein followed by a 20mL saline flush due to its 6-second half-life. If ineffective, a second dose of 12mg can be given. Diltiazem and metoprolol are second-line agents. Amiodarone is used for wide-complex or refractory arrhythmias.",
+      "difficulty": "easy",
+      "tags": ["SVT", "adenosine", "narrow-complex tachycardia", "ACLS"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv012",
+      "question": "A 72-year-old male with heart failure presents with progressive dyspnea, 8-pound weight gain over 1 week, and 3+ pitting edema to the knees bilaterally. Current medications include lisinopril, carvedilol, and furosemide 40mg daily. BNP is 1,850 pg/mL. What is the most appropriate initial intervention?",
+      "options": [
+        "Increase oral furosemide to 80mg twice daily",
+        "Administer IV furosemide 80mg",
+        "Add metolazone 5mg PO",
+        "Start dobutamine infusion"
+      ],
+      "correctAnswer": 1,
+      "rationale": "IV diuretics are preferred for acute decompensated heart failure (ADHF) because they have faster onset, more predictable absorption, and greater efficacy than oral diuretics in patients with gut edema. The initial IV dose should be at least equivalent to the patient's total daily oral dose. This patient shows clear volume overload (weight gain, edema, elevated BNP). Oral dose increases are less effective in acute decompensation. Metolazone is added for diuretic resistance. Dobutamine is reserved for cardiogenic shock with low output.",
+      "difficulty": "medium",
+      "tags": ["heart failure", "ADHF", "diuretics", "volume overload", "BNP"],
+      "references": ["AHA Heart Failure Guidelines 2022"]
+    },
+    {
+      "id": "cv013",
+      "question": "Which rhythm requires immediate defibrillation?",
+      "options": [
+        "Asystole",
+        "Pulseless electrical activity (PEA)",
+        "Ventricular fibrillation",
+        "Third-degree heart block"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Ventricular fibrillation (VF) is a shockable rhythm requiring immediate defibrillation. VF is chaotic electrical activity without organized contraction - the only treatment is electrical defibrillation to reset the heart's electrical system. Asystole and PEA are non-shockable rhythms treated with CPR and epinephrine. Third-degree heart block may require transcutaneous pacing if symptomatic but is not treated with defibrillation. The two shockable rhythms are VF and pulseless ventricular tachycardia (pVT).",
+      "difficulty": "easy",
+      "tags": ["ventricular fibrillation", "defibrillation", "ACLS", "shockable rhythm"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv014",
+      "question": "A 58-year-old male with history of MI presents with HR 38, BP 82/50, and dizziness. ECG shows third-degree AV block. Atropine 0.5mg IV has been given twice without improvement. What is the next intervention?",
+      "options": [
+        "Administer atropine 1mg IV",
+        "Initiate transcutaneous pacing",
+        "Administer epinephrine 1mg IV push",
+        "Prepare for synchronized cardioversion"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Transcutaneous pacing is indicated for symptomatic bradycardia unresponsive to atropine. This patient has third-degree (complete) heart block with hemodynamic instability (hypotension, dizziness). Atropine is often ineffective in complete heart block because the block is below the AV node. Maximum atropine dose is 3mg; additional doses are unlikely to help. Transcutaneous pacing provides immediate rate support while preparing for transvenous pacing. Epinephrine infusion (not push) can be used if pacing is unavailable. Cardioversion is for tachyarrhythmias.",
+      "difficulty": "medium",
+      "tags": ["heart block", "bradycardia", "transcutaneous pacing", "atropine", "ACLS"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv015",
+      "question": "A patient with acute anterior STEMI suddenly becomes unresponsive. The monitor shows ventricular tachycardia at 220 bpm. No pulse is palpable. What is the immediate action?",
+      "options": [
+        "Administer amiodarone 300mg IV",
+        "Perform synchronized cardioversion at 100J",
+        "Deliver unsynchronized defibrillation at 200J biphasic",
+        "Begin CPR and establish IV access"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Pulseless ventricular tachycardia (pVT) is treated identically to ventricular fibrillation with immediate unsynchronized defibrillation. Synchronization is not used because: 1) there is no pulse (patient is in cardiac arrest), and 2) the synchronization function may delay shock delivery if the monitor cannot identify R waves in rapid VT. Immediate defibrillation takes priority over CPR when a defibrillator is immediately available and the arrest is witnessed. Amiodarone is given after the second shock.",
+      "difficulty": "medium",
+      "tags": ["pulseless VT", "defibrillation", "ACLS", "cardiac arrest", "STEMI complication"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv016",
+      "question": "A 65-year-old female with hypertension presents with severe headache, blurred vision, and chest pain. BP is 240/140 mmHg. Fundoscopic exam reveals papilledema and retinal hemorrhages. Creatinine is elevated at 2.8 mg/dL. What is this condition called?",
+      "options": [
+        "Hypertensive urgency",
+        "Hypertensive emergency",
+        "Malignant hypertension",
+        "Accelerated hypertension"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This is a hypertensive emergency, defined as severely elevated blood pressure WITH evidence of acute end-organ damage. This patient demonstrates multiple organ involvement: neurological (headache, visual changes, papilledema), cardiac (chest pain), and renal (elevated creatinine). Hypertensive urgency is severe BP elevation WITHOUT end-organ damage. Malignant and accelerated hypertension are older terms. Treatment requires IV antihypertensives with careful BP reduction (25% in first hour, then gradual reduction over 24-48 hours to avoid cerebral hypoperfusion).",
+      "difficulty": "medium",
+      "tags": ["hypertensive emergency", "end-organ damage", "papilledema", "blood pressure"],
+      "references": ["ACC/AHA Hypertension Guidelines 2017"]
+    },
+    {
+      "id": "cv017",
+      "question": "During CPR, what is the recommended compression-to-ventilation ratio for a single rescuer with an adult patient without an advanced airway?",
+      "options": [
+        "15:2",
+        "30:2",
+        "Continuous compressions with ventilation every 6 seconds",
+        "50:2"
+      ],
+      "correctAnswer": 1,
+      "rationale": "The recommended compression-to-ventilation ratio for adult CPR without an advanced airway is 30:2 (30 compressions followed by 2 breaths). This applies to both single and two-rescuer CPR in adults. The 15:2 ratio is used for two-rescuer infant/child CPR. Once an advanced airway is placed, continuous compressions at 100-120/min with asynchronous ventilations every 6 seconds (10 breaths/min) are performed. High-quality CPR includes: rate 100-120/min, depth 2-2.4 inches, full chest recoil, minimal interruptions.",
+      "difficulty": "easy",
+      "tags": ["CPR", "BLS", "compression ratio", "cardiac arrest"],
+      "references": ["AHA BLS Guidelines 2020"]
+    },
+    {
+      "id": "cv018",
+      "question": "A patient with known heart failure with reduced ejection fraction (HFrEF) of 25% asks about long-term medications. Which combination has been shown to reduce mortality in HFrEF?",
+      "options": [
+        "Digoxin, furosemide, and amlodipine",
+        "ACE inhibitor, beta-blocker, and aldosterone antagonist",
+        "Calcium channel blocker, thiazide diuretic, and aspirin",
+        "Hydralazine, nitrate, and NSAIDs"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Guideline-directed medical therapy (GDMT) for HFrEF includes ACE inhibitors (or ARBs/ARNIs), beta-blockers (carvedilol, metoprolol succinate, or bisoprolol), and aldosterone antagonists (spironolactone or eplerenone) - all proven to reduce mortality. SGLT2 inhibitors are now also included. Digoxin reduces hospitalizations but not mortality. Calcium channel blockers (except amlodipine) are generally avoided in HFrEF. NSAIDs worsen heart failure and should be avoided. The four pillars of HFrEF therapy are: ARNI/ACEi/ARB, beta-blocker, MRA, and SGLT2i.",
+      "difficulty": "medium",
+      "tags": ["heart failure", "HFrEF", "GDMT", "mortality reduction", "pharmacology"],
+      "references": ["AHA/ACC Heart Failure Guidelines 2022"]
+    },
+    {
+      "id": "cv019",
+      "question": "A 50-year-old male presents 2 hours after cocaine use with severe chest pain, diaphoresis, and anxiety. ECG shows ST elevation in V1-V4. BP is 190/110, HR 118. Which medication is CONTRAINDICATED?",
+      "options": [
+        "Aspirin",
+        "Nitroglycerin",
+        "Metoprolol",
+        "Benzodiazepines"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Beta-blockers are CONTRAINDICATED in cocaine-induced chest pain/MI. Cocaine causes coronary vasoconstriction through alpha-adrenergic stimulation. Beta-blockers block the beta-mediated vasodilation, leaving alpha-mediated vasoconstriction unopposed, which can worsen coronary spasm and hypertension. Treatment includes benzodiazepines (reduce sympathetic drive), nitroglycerin (coronary vasodilation), aspirin, and calcium channel blockers if needed. If beta-blockade is absolutely necessary, use combined alpha/beta-blocker like labetalol, though this is controversial.",
+      "difficulty": "hard",
+      "tags": ["cocaine", "STEMI", "beta-blocker contraindication", "coronary vasospasm"],
+      "references": ["AHA Scientific Statement on Cocaine Cardiovascular Effects"]
+    },
+    {
+      "id": "cv020",
+      "question": "A patient with Type A aortic dissection is being prepared for emergent surgery. BP is 185/105 despite IV esmolol. What additional medication should be added?",
+      "options": [
+        "Hydralazine",
+        "Nitroprusside",
+        "Nifedipine",
+        "Furosemide"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Nitroprusside is added to beta-blocker therapy for BP control in aortic dissection when beta-blockade alone is insufficient. The treatment priority is reducing aortic wall stress by controlling both heart rate (<60 bpm) AND blood pressure (SBP 100-120 mmHg). Beta-blockers MUST be given first because vasodilators alone cause reflex tachycardia, increasing aortic shear stress. Nitroprusside provides rapid, titratable BP reduction. Hydralazine causes reflex tachycardia. Nifedipine's effect is unpredictable. Furosemide doesn't address the hemodynamic goals.",
+      "difficulty": "hard",
+      "tags": ["aortic dissection", "blood pressure control", "nitroprusside", "esmolol"],
+      "references": ["ACC/AHA Aortic Disease Guidelines 2022"]
+    },
+    {
+      "id": "cv021",
+      "question": "A 78-year-old female presents with syncope. ECG shows atrial fibrillation with a ventricular rate of 40 bpm and a 3.2-second pause. She is alert but feels lightheaded. What is the most appropriate intervention?",
+      "options": [
+        "Administer atropine 0.5mg IV",
+        "Initiate transcutaneous pacing",
+        "Administer diltiazem 20mg IV",
+        "Prepare for permanent pacemaker placement"
+      ],
+      "correctAnswer": 0,
+      "rationale": "Atropine 0.5mg IV is the first-line treatment for symptomatic bradycardia in a patient who is hemodynamically stable enough to allow time for medication effect. This patient is alert with only lightheadedness, not in extremis. Atropine increases heart rate by blocking vagal tone. If atropine fails (can give up to 3mg total), transcutaneous pacing would be next. Diltiazem would worsen bradycardia. While this patient likely needs a permanent pacemaker (tachy-brady syndrome), that's not an emergency intervention. Transcutaneous pacing is reserved for unstable patients or atropine failure.",
+      "difficulty": "medium",
+      "tags": ["bradycardia", "atrial fibrillation", "atropine", "syncope", "sick sinus"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv022",
+      "question": "Which ECG finding is most suggestive of hyperkalemia?",
+      "options": [
+        "Prolonged QT interval",
+        "Peaked T waves and widened QRS",
+        "ST depression in V1-V3",
+        "Delta waves"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Peaked (tall, narrow, symmetric) T waves and widened QRS complex are classic ECG findings of hyperkalemia. The progression of ECG changes with increasing potassium: peaked T waves (5.5-6.5 mEq/L) → PR prolongation and P wave flattening (6.5-7.5 mEq/L) → QRS widening (7.0-8.0 mEq/L) → sine wave pattern → VF/asystole (>8.0 mEq/L). Prolonged QT suggests hypokalemia, hypomagnesemia, or drug effect. ST depression indicates ischemia. Delta waves indicate Wolff-Parkinson-White syndrome.",
+      "difficulty": "easy",
+      "tags": ["hyperkalemia", "ECG", "peaked T waves", "electrolyte emergency"],
+      "references": ["ENA Emergency Nursing Core Curriculum"]
+    },
+    {
+      "id": "cv023",
+      "question": "A patient with acute pulmonary edema and BP 85/60 is not responding to BiPAP and IV furosemide. SpO2 remains 84%. What is the next intervention?",
+      "options": [
+        "Increase BiPAP settings",
+        "Administer morphine 4mg IV",
+        "Prepare for endotracheal intubation",
+        "Start norepinephrine infusion"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Endotracheal intubation is indicated when non-invasive ventilation fails to maintain adequate oxygenation. This patient has refractory hypoxemia (SpO2 84%) despite BiPAP, indicating respiratory failure requiring invasive mechanical ventilation. Intubation allows for higher levels of PEEP, better secretion management, and airway protection. Simply increasing BiPAP may not be sufficient and delays definitive airway management. Morphine is no longer routinely recommended and could worsen hypotension. Norepinephrine addresses BP but not the respiratory failure.",
+      "difficulty": "medium",
+      "tags": ["respiratory failure", "intubation", "pulmonary edema", "cardiogenic shock"],
+      "references": ["AHA Heart Failure Guidelines 2022"]
+    },
+    {
+      "id": "cv024",
+      "question": "A patient receiving tPA for STEMI suddenly develops hypotension, JVD, and new right bundle branch block. What complication should be suspected?",
+      "options": [
+        "Allergic reaction to tPA",
+        "Hemorrhagic stroke",
+        "Free wall rupture with tamponade",
+        "Reperfusion arrhythmia"
+      ],
+      "correctAnswer": 2,
+      "rationale": "The triad of hypotension, JVD, and new conduction abnormality (RBBB) after thrombolytic therapy for MI suggests free wall rupture with cardiac tamponade. This is a catastrophic mechanical complication occurring in 1-3% of STEMI patients, typically 3-5 days post-MI but can occur earlier with thrombolytics. The new RBBB suggests septal involvement. Tamponade causes hypotension and JVD (Beck's triad). This requires emergent surgical intervention. Allergic reactions cause urticaria/anaphylaxis. Hemorrhagic stroke causes neurological deficits. Reperfusion arrhythmias are usually transient.",
+      "difficulty": "hard",
+      "tags": ["STEMI complication", "free wall rupture", "tamponade", "thrombolytics"],
+      "references": ["ACC/AHA STEMI Guidelines 2023"]
+    },
+    {
+      "id": "cv025",
+      "question": "What is the target door-to-balloon time for primary PCI in STEMI?",
+      "options": [
+        "60 minutes",
+        "90 minutes",
+        "120 minutes",
+        "180 minutes"
+      ],
+      "correctAnswer": 1,
+      "rationale": "The target door-to-balloon (D2B) time for primary PCI in STEMI is ≤90 minutes. This is measured from ED arrival to first balloon inflation in the coronary artery. For patients transferred from non-PCI capable hospitals, the first medical contact-to-balloon time should be ≤120 minutes. If PCI cannot be performed within these timeframes, fibrinolytic therapy should be considered (door-to-needle ≤30 minutes). Shorter ischemic times correlate with better outcomes, reduced infarct size, and improved survival. Every 30-minute delay increases mortality by approximately 7.5%.",
+      "difficulty": "easy",
+      "tags": ["STEMI", "PCI", "door-to-balloon", "reperfusion time"],
+      "references": ["ACC/AHA STEMI Guidelines 2023"]
+    },
+    {
+      "id": "cv026",
+      "question": "A 55-year-old male with an ICD presents after receiving multiple shocks. He is currently in sinus rhythm at 72 bpm and feels well. Interrogation shows appropriate shocks for ventricular tachycardia. What is the priority nursing action?",
+      "options": [
+        "Prepare for ICD replacement",
+        "Administer amiodarone loading dose",
+        "Assess for and treat reversible causes of VT",
+        "Disable the ICD to prevent further shocks"
+      ],
+      "correctAnswer": 2,
+      "rationale": "The priority is to assess for and treat reversible causes of ventricular tachycardia. Even though the ICD appropriately terminated VT, the underlying trigger must be identified. Reversible causes include: electrolyte abnormalities (hypokalemia, hypomagnesemia), ischemia, medication changes/toxicity, hyperthyroidism, and infection. Labs (electrolytes, troponin, drug levels), ECG, and history are essential. The ICD is functioning correctly and should not be disabled. Amiodarone may be needed but treating the underlying cause is priority. ICD replacement is not indicated for appropriate therapy.",
+      "difficulty": "medium",
+      "tags": ["ICD", "ventricular tachycardia", "appropriate shock", "reversible causes"],
+      "references": ["ACC/AHA ICD Guidelines"]
+    },
+    {
+      "id": "cv027",
+      "question": "A patient with acute coronary syndrome is started on heparin and eptifibatide. Four hours later, platelet count drops from 210,000 to 85,000/μL. What is the most likely cause?",
+      "options": [
+        "Heparin-induced thrombocytopenia (HIT)",
+        "Eptifibatide-induced thrombocytopenia",
+        "Dilutional thrombocytopenia",
+        "Sepsis-related thrombocytopenia"
+      ],
+      "correctAnswer": 1,
+      "rationale": "GP IIb/IIIa inhibitors (eptifibatide, abciximab, tirofiban) can cause acute, profound thrombocytopenia within hours of administration. This is different from HIT, which typically occurs 5-10 days after heparin initiation (or sooner with prior heparin exposure). The rapid onset (4 hours) and >50% platelet drop are characteristic of GP IIb/IIIa inhibitor-induced thrombocytopenia. Management includes stopping the GP IIb/IIIa inhibitor, platelet transfusion if bleeding or <10,000, and monitoring. Heparin should also be evaluated but HIT timing doesn't fit this scenario.",
+      "difficulty": "hard",
+      "tags": ["thrombocytopenia", "GP IIb/IIIa inhibitor", "eptifibatide", "ACS complication"],
+      "references": ["ACC/AHA ACS Guidelines"]
+    },
+    {
+      "id": "cv028",
+      "question": "A patient with severe aortic stenosis presents with syncope, angina, and heart failure symptoms. What is the definitive treatment?",
+      "options": [
+        "Medical management with diuretics and ACE inhibitors",
+        "Balloon aortic valvuloplasty",
+        "Aortic valve replacement (surgical or TAVR)",
+        "Beta-blocker therapy"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Aortic valve replacement (AVR) - either surgical (SAVR) or transcatheter (TAVR) - is the definitive treatment for symptomatic severe aortic stenosis. The classic symptom triad is syncope, angina, and heart failure. Once symptoms develop, prognosis without intervention is poor (2-year survival ~50% with heart failure). Medical therapy is palliative only and doesn't change outcomes. Balloon valvuloplasty provides temporary relief and is used as a bridge to definitive therapy or for palliation in non-surgical candidates. TAVR has expanded treatment options for high-risk surgical patients.",
+      "difficulty": "medium",
+      "tags": ["aortic stenosis", "valve replacement", "TAVR", "syncope"],
+      "references": ["ACC/AHA Valvular Heart Disease Guidelines 2020"]
+    },
+    {
+      "id": "cv029",
+      "question": "During resuscitation, which medication is given for pulseless electrical activity (PEA)?",
+      "options": [
+        "Atropine 1mg IV",
+        "Epinephrine 1mg IV every 3-5 minutes",
+        "Amiodarone 300mg IV",
+        "Adenosine 12mg IV"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Epinephrine 1mg IV every 3-5 minutes is the vasopressor used in PEA arrest. PEA is a non-shockable rhythm, so defibrillation is not indicated. Treatment focuses on high-quality CPR, epinephrine administration, and identifying/treating reversible causes (H's and T's: Hypovolemia, Hypoxia, Hydrogen ion/acidosis, Hypo/hyperkalemia, Hypothermia, Tension pneumothorax, Tamponade, Toxins, Thrombosis pulmonary, Thrombosis coronary). Atropine is no longer recommended for asystole/PEA. Amiodarone is for shockable rhythms. Adenosine is for SVT.",
+      "difficulty": "easy",
+      "tags": ["PEA", "cardiac arrest", "epinephrine", "ACLS", "non-shockable rhythm"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv030",
+      "question": "A patient with heart failure and EF of 20% develops new atrial fibrillation with RVR at 145 bpm. BP is 95/70. Which rate control agent is preferred?",
+      "options": [
+        "Diltiazem",
+        "Verapamil",
+        "Amiodarone",
+        "Metoprolol"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Amiodarone is preferred for rate control in atrial fibrillation with heart failure and reduced EF. Non-dihydropyridine calcium channel blockers (diltiazem, verapamil) are contraindicated in HFrEF due to negative inotropic effects that can worsen heart failure. While beta-blockers are part of HFrEF therapy, acute IV administration in decompensated HF with borderline BP (95/70) can precipitate cardiogenic shock. Amiodarone provides rate control with minimal negative inotropy. Digoxin is an alternative but slower onset. If unstable, cardioversion is indicated.",
+      "difficulty": "hard",
+      "tags": ["atrial fibrillation", "heart failure", "rate control", "amiodarone"],
+      "references": ["ACC/AHA Atrial Fibrillation Guidelines", "AHA Heart Failure Guidelines"]
+    },
+    {
+      "id": "cv031",
+      "question": "A patient presents with chest pain and ECG shows ST elevation in leads V1-V4 with reciprocal ST depression in II, III, aVF. Which coronary artery is most likely occluded?",
+      "options": [
+        "Right coronary artery",
+        "Left circumflex artery",
+        "Left anterior descending artery",
+        "Left main coronary artery"
+      ],
+      "correctAnswer": 2,
+      "rationale": "ST elevation in V1-V4 indicates an anterior STEMI, which is caused by occlusion of the left anterior descending (LAD) artery. The LAD supplies the anterior wall and septum of the left ventricle. Reciprocal changes (ST depression in inferior leads II, III, aVF) support the diagnosis. Anterior MIs are high-risk due to large myocardial territory. RCA occlusion causes inferior STEMI (II, III, aVF elevation). Circumflex occlusion causes lateral STEMI (I, aVL, V5-V6). Left main occlusion is often fatal or causes widespread ST changes.",
+      "difficulty": "medium",
+      "tags": ["STEMI", "LAD", "anterior MI", "ECG localization", "coronary anatomy"],
+      "references": ["ACC/AHA STEMI Guidelines 2023"]
+    },
+    {
+      "id": "cv032",
+      "question": "A post-cardiac catheterization patient develops severe back pain, hypotension, and a rapidly expanding flank ecchymosis. Hemoglobin drops from 12 to 8 g/dL. What is the most likely complication?",
+      "options": [
+        "Femoral artery pseudoaneurysm",
+        "Retroperitoneal hemorrhage",
+        "Arteriovenous fistula",
+        "Femoral nerve injury"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Retroperitoneal hemorrhage is a serious complication of femoral artery catheterization. Classic presentation includes: back/flank/abdominal pain, hypotension, tachycardia, and falling hemoglobin without visible external bleeding. Flank ecchymosis (Grey Turner sign) indicates retroperitoneal blood tracking. This is a life-threatening emergency requiring immediate fluid resuscitation, blood transfusion, and often surgical or interventional repair. Pseudoaneurysm presents as a pulsatile groin mass. AV fistula causes a continuous bruit. Nerve injury causes sensory/motor deficits.",
+      "difficulty": "medium",
+      "tags": ["retroperitoneal hemorrhage", "cardiac catheterization", "complication", "vascular access"],
+      "references": ["ACC Cardiac Catheterization Guidelines"]
+    },
+    {
+      "id": "cv033",
+      "question": "What is the first-line treatment for Torsades de Pointes?",
+      "options": [
+        "Amiodarone 150mg IV",
+        "Lidocaine 1mg/kg IV",
+        "Magnesium sulfate 2g IV",
+        "Synchronized cardioversion"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Magnesium sulfate 2g IV over 1-2 minutes is the first-line treatment for Torsades de Pointes (TdP), even in patients with normal magnesium levels. TdP is a polymorphic ventricular tachycardia associated with prolonged QT interval. Magnesium stabilizes the cardiac membrane and shortens the QT interval. If the patient is pulseless, immediate defibrillation is indicated. Additional treatment includes correcting electrolytes (potassium to 4.5-5.0), stopping QT-prolonging medications, and overdrive pacing or isoproterenol to increase heart rate. Amiodarone and other antiarrhythmics can worsen TdP by prolonging QT.",
+      "difficulty": "medium",
+      "tags": ["Torsades de Pointes", "magnesium", "prolonged QT", "polymorphic VT"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv034",
+      "question": "A 60-year-old male with inferior STEMI develops hypotension (BP 78/50) after receiving nitroglycerin. JVD is present and lung sounds are clear. What is the most likely cause?",
+      "options": [
+        "Left ventricular failure",
+        "Right ventricular infarction",
+        "Cardiogenic shock from large MI",
+        "Hypovolemia"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Right ventricular (RV) infarction complicates 30-50% of inferior STEMIs (RCA supplies both inferior LV and RV). Classic triad: hypotension, elevated JVP (JVD), and clear lungs. RV infarction causes the RV to become preload-dependent. Nitroglycerin reduces preload, precipitating severe hypotension. Treatment includes IV fluid boluses (contrary to typical MI management), avoiding nitrates and diuretics, and maintaining AV synchrony. Right-sided ECG leads (V4R) showing ST elevation confirm RV involvement. LV failure would show pulmonary congestion.",
+      "difficulty": "hard",
+      "tags": ["RV infarction", "inferior STEMI", "nitroglycerin", "preload dependent"],
+      "references": ["ACC/AHA STEMI Guidelines 2023"]
+    },
+    {
+      "id": "cv035",
+      "question": "Which finding on physical exam is most consistent with severe mitral regurgitation?",
+      "options": [
+        "Crescendo-decrescendo systolic murmur at right upper sternal border",
+        "Holosystolic murmur at apex radiating to axilla",
+        "Diastolic rumble at apex",
+        "Early diastolic decrescendo murmur at left sternal border"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Mitral regurgitation produces a holosystolic (pansystolic) murmur best heard at the apex, radiating to the left axilla. The murmur occurs throughout systole as blood regurgitates from LV to LA during ventricular contraction. Crescendo-decrescendo systolic murmur at right upper sternal border is aortic stenosis. Diastolic rumble at apex is mitral stenosis. Early diastolic decrescendo at left sternal border is aortic regurgitation. Acute severe MR (papillary muscle rupture post-MI) may present with pulmonary edema and cardiogenic shock.",
+      "difficulty": "medium",
+      "tags": ["mitral regurgitation", "heart murmur", "physical exam", "valvular disease"],
+      "references": ["ACC/AHA Valvular Heart Disease Guidelines 2020"]
+    },
+    {
+      "id": "cv036",
+      "question": "A patient in cardiogenic shock (BP 75/50, CI 1.8 L/min/m², PCWP 28 mmHg) is not responding to dobutamine. What is the next intervention?",
+      "options": [
+        "Add norepinephrine infusion",
+        "Increase dobutamine dose",
+        "Insert intra-aortic balloon pump (IABP)",
+        "Administer IV furosemide"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Intra-aortic balloon pump (IABP) or other mechanical circulatory support is indicated for cardiogenic shock refractory to pharmacological therapy. IABP provides: increased coronary perfusion (inflation during diastole), decreased afterload (deflation during systole), and improved cardiac output. This patient has classic cardiogenic shock: hypotension, low cardiac index (<2.2), and elevated filling pressures (PCWP >18). While norepinephrine may help maintain BP, it increases afterload and myocardial oxygen demand. Furosemide addresses congestion but not the pump failure. Consider Impella or ECMO for refractory cases.",
+      "difficulty": "hard",
+      "tags": ["cardiogenic shock", "IABP", "mechanical support", "refractory shock"],
+      "references": ["ACC/AHA Heart Failure Guidelines", "SHOCK Trial"]
+    },
+    {
+      "id": "cv037",
+      "question": "A patient with prosthetic mitral valve presents with fever, new regurgitant murmur, and splinter hemorrhages. Blood cultures are positive for Staphylococcus aureus. What is the diagnosis?",
+      "options": [
+        "Rheumatic fever",
+        "Prosthetic valve endocarditis",
+        "Myocarditis",
+        "Libman-Sacks endocarditis"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This presentation is classic for prosthetic valve endocarditis (PVE): fever, new/changing murmur, positive blood cultures with typical organism (S. aureus), and peripheral manifestations (splinter hemorrhages). PVE is a serious complication occurring in 1-6% of prosthetic valves. S. aureus PVE is aggressive with high mortality. Modified Duke criteria help establish diagnosis. Treatment requires prolonged IV antibiotics (6+ weeks) and often surgical valve replacement, especially with S. aureus, heart failure, abscess, or persistent bacteremia. Rheumatic fever follows streptococcal pharyngitis. Libman-Sacks is associated with lupus.",
+      "difficulty": "medium",
+      "tags": ["endocarditis", "prosthetic valve", "S. aureus", "fever"],
+      "references": ["AHA Infective Endocarditis Guidelines"]
+    },
+    {
+      "id": "cv038",
+      "question": "What is the recommended initial energy level for biphasic defibrillation in adult ventricular fibrillation?",
+      "options": [
+        "50 Joules",
+        "100 Joules",
+        "120-200 Joules (manufacturer recommendation)",
+        "360 Joules"
+      ],
+      "correctAnswer": 2,
+      "rationale": "For biphasic defibrillators, the initial energy for VF/pulseless VT is 120-200 Joules, based on manufacturer recommendations. If the specific recommendation is unknown, use the maximum available dose. Biphasic waveforms are more effective at lower energies than monophasic. For monophasic defibrillators, 360J is used for all shocks. Subsequent biphasic shocks should be at the same or higher energy level. Synchronized cardioversion for unstable tachyarrhythmias uses lower energies: A-fib 120-200J, A-flutter/SVT 50-100J, monomorphic VT 100J.",
+      "difficulty": "easy",
+      "tags": ["defibrillation", "ventricular fibrillation", "biphasic", "ACLS"],
+      "references": ["AHA ACLS Guidelines 2020"]
+    },
+    {
+      "id": "cv039",
+      "question": "A patient with acute pericarditis develops increasing dyspnea, hypotension, and distant heart sounds over 48 hours despite NSAID therapy. ECG shows low voltage and electrical alternans. What intervention is urgently needed?",
+      "options": [
+        "Increase NSAID dose",
+        "Start colchicine",
+        "Perform pericardiocentesis",
+        "Administer IV corticosteroids"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This patient has developed cardiac tamponade complicating pericarditis, requiring emergent pericardiocentesis. Signs include: Beck's triad (hypotension, JVD/distant heart sounds, muffled heart sounds), electrical alternans (alternating QRS amplitude due to heart swinging in fluid), and low voltage on ECG. Pericardiocentesis is life-saving and diagnostic. Echocardiography should be performed if time permits but should not delay treatment in unstable patients. Medical therapy (NSAIDs, colchicine, steroids) treats pericarditis but cannot address tamponade physiology. Surgical pericardial window may be needed for recurrence.",
+      "difficulty": "medium",
+      "tags": ["cardiac tamponade", "pericardiocentesis", "pericarditis", "electrical alternans"],
+      "references": ["ESC Pericardial Disease Guidelines"]
+    },
+    {
+      "id": "cv040",
+      "question": "A patient with STEMI receives fibrinolytic therapy. Sixty minutes later, chest pain persists and ST elevation is unchanged. What does this indicate and what is the next step?",
+      "options": [
+        "Successful reperfusion; continue monitoring",
+        "Failed reperfusion; urgent rescue PCI",
+        "Reinfarction; repeat fibrinolytic therapy",
+        "Pericarditis; start NSAIDs"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Persistent chest pain and unchanged ST elevation 60-90 minutes after fibrinolytic therapy indicates failed reperfusion, requiring urgent rescue PCI. Signs of successful reperfusion include: resolution of chest pain, >50% reduction in ST elevation, reperfusion arrhythmias (accelerated idioventricular rhythm), and early peak of cardiac biomarkers. Failed fibrinolysis occurs in 20-40% of patients. Rescue PCI should be performed as soon as possible at a PCI-capable center. Repeat fibrinolytic therapy is not recommended due to bleeding risk and limited efficacy. Continuing to monitor delays definitive treatment.",
+      "difficulty": "medium",
+      "tags": ["fibrinolysis", "failed reperfusion", "rescue PCI", "STEMI"],
+      "references": ["ACC/AHA STEMI Guidelines 2023"]
+    },
+    {
+      "id": "cv041",
+      "question": "A 45-year-old female presents with pleuritic chest pain that improves when leaning forward. She had a viral illness 2 weeks ago. ECG shows diffuse ST elevation and PR depression. What is the most likely diagnosis?",
+      "options": [
+        "Acute myocardial infarction",
+        "Pulmonary embolism",
+        "Acute pericarditis",
+        "Aortic dissection"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This is classic acute pericarditis: pleuritic chest pain (sharp, worse with inspiration), positional relief (better leaning forward), recent viral prodrome, and characteristic ECG findings (diffuse ST elevation not following coronary distribution, PR depression especially in lead II, PR elevation in aVR). Unlike STEMI, pericarditis causes diffuse ST changes without reciprocal depression and PR segment changes. Treatment includes NSAIDs (ibuprofen, aspirin) plus colchicine to reduce recurrence. Most cases are viral/idiopathic. Avoid anticoagulation due to risk of hemorrhagic pericarditis.",
+      "difficulty": "easy",
+      "tags": ["pericarditis", "pleuritic chest pain", "PR depression", "viral illness"],
+      "references": ["ESC Pericardial Disease Guidelines 2015"]
+    },
+    {
+      "id": "cv042",
+      "question": "During CPR, what is the recommended depth of chest compressions for an adult?",
+      "options": [
+        "At least 1 inch (2.5 cm)",
+        "At least 1.5 inches (4 cm)",
+        "At least 2 inches (5 cm) but not more than 2.4 inches (6 cm)",
+        "At least 3 inches (7.5 cm)"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Adult chest compressions should be at least 2 inches (5 cm) deep but not exceed 2.4 inches (6 cm). Adequate depth is essential for generating sufficient cardiac output during CPR. Compressions that are too shallow are ineffective; compressions that are too deep increase risk of injury (rib fractures, internal organ damage). Other high-quality CPR components: rate 100-120/min, allow full chest recoil, minimize interruptions (<10 seconds), avoid excessive ventilation. Feedback devices can help maintain proper depth. For children, compress at least 1/3 AP diameter (about 2 inches); for infants, about 1.5 inches.",
+      "difficulty": "easy",
+      "tags": ["CPR", "chest compressions", "BLS", "compression depth"],
+      "references": ["AHA BLS Guidelines 2020"]
+    },
+    {
+      "id": "cv043",
+      "question": "A patient with known Wolff-Parkinson-White syndrome presents with atrial fibrillation and a ventricular rate of 220 bpm. Which medication is CONTRAINDICATED?",
+      "options": [
+        "Procainamide",
+        "Amiodarone",
+        "Diltiazem",
+        "Ibutilide"
+      ],
+      "correctAnswer": 2,
+      "rationale": "AV nodal blocking agents (diltiazem, verapamil, digoxin, adenosine) are CONTRAINDICATED in WPW with atrial fibrillation. In WPW, an accessory pathway bypasses the AV node. Blocking the AV node forces all conduction through the accessory pathway, which can conduct rapidly and degenerate into ventricular fibrillation. Treatment options include procainamide (slows accessory pathway conduction), ibutilide, or synchronized cardioversion if unstable. Amiodarone is controversial - it has some AV nodal blocking properties but also slows accessory pathway; procainamide is preferred. Definitive treatment is catheter ablation.",
+      "difficulty": "hard",
+      "tags": ["WPW", "atrial fibrillation", "accessory pathway", "contraindication"],
+      "references": ["ACC/AHA SVT Guidelines 2015"]
+    },
+    {
+      "id": "cv044",
+      "question": "A patient receiving IV amiodarone for atrial fibrillation develops acute shortness of breath, hypoxemia, and bilateral pulmonary infiltrates on chest X-ray. What complication should be suspected?",
+      "options": [
+        "Pulmonary embolism",
+        "Amiodarone-induced pulmonary toxicity",
+        "Acute heart failure exacerbation",
+        "Hospital-acquired pneumonia"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Amiodarone-induced pulmonary toxicity (AIPT) can occur acutely (within days of IV loading) or chronically (months to years of oral therapy). Acute presentation includes dyspnea, hypoxemia, and diffuse pulmonary infiltrates. Risk factors include high cumulative dose, pre-existing lung disease, and high FiO2 exposure. Mechanism involves direct toxicity and immune-mediated injury. Treatment requires stopping amiodarone and often corticosteroids. AIPT has significant mortality. Other amiodarone toxicities include thyroid dysfunction, hepatotoxicity, corneal deposits, and skin photosensitivity. The long half-life (40-55 days) means effects persist after discontinuation.",
+      "difficulty": "hard",
+      "tags": ["amiodarone toxicity", "pulmonary toxicity", "drug adverse effect"],
+      "references": ["ACC/AHA Atrial Fibrillation Guidelines"]
+    },
+    {
+      "id": "cv045",
+      "question": "A patient with acute decompensated heart failure has the following hemodynamics: BP 85/60, CI 1.6 L/min/m², PCWP 8 mmHg. What type of shock is this?",
+      "options": [
+        "Cardiogenic shock with volume overload",
+        "Cardiogenic shock with hypovolemia",
+        "Distributive shock",
+        "Obstructive shock"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This patient has cardiogenic shock with relative hypovolemia (low PCWP of 8 mmHg). Classic cardiogenic shock has elevated filling pressures (PCWP >18), but this patient's low PCWP suggests inadequate preload despite pump failure. This can occur with RV infarction, excessive diuresis, or inadequate fluid intake. Treatment requires careful fluid administration to optimize preload while supporting the failing heart. Typical cardiogenic shock (high PCWP) is treated with inotropes and diuretics. Low CI (<2.2) with low PCWP needs volume. Distributive shock has low SVR. Obstructive shock has mechanical obstruction (PE, tamponade).",
+      "difficulty": "hard",
+      "tags": ["cardiogenic shock", "hemodynamics", "PCWP", "preload"],
+      "references": ["ACC/AHA Heart Failure Guidelines"]
+    },
+    {
+      "id": "cv046",
+      "question": "What is the most common cause of sudden cardiac death in young athletes?",
+      "options": [
+        "Coronary artery disease",
+        "Hypertrophic cardiomyopathy",
+        "Myocarditis",
+        "Long QT syndrome"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Hypertrophic cardiomyopathy (HCM) is the most common cause of sudden cardiac death in young athletes in the United States. HCM causes asymmetric septal hypertrophy that can obstruct left ventricular outflow and predispose to fatal arrhythmias during exertion. Other causes include anomalous coronary arteries, arrhythmogenic right ventricular cardiomyopathy (ARVC), commotio cordis, and channelopathies (Long QT, Brugada). Pre-participation screening with history, physical exam, and sometimes ECG aims to identify at-risk athletes. In older athletes (>35), coronary artery disease becomes the leading cause.",
+      "difficulty": "medium",
+      "tags": ["sudden cardiac death", "HCM", "young athletes", "screening"],
+      "references": ["AHA Scientific Statement on Athlete Screening"]
+    }
+     ]
+}
