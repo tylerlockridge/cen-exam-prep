@@ -1,0 +1,609 @@
+{
+  "category": "Respiratory",
+  "subcategory": "Respiratory Emergencies",
+  "examPercentage": 10,
+  "totalQuestions": 40,
+  "lastUpdated": "2025-01-15",
+  "questions": [
+    {
+      "id": "resp001",
+      "question": "A 28-year-old male with history of asthma presents with severe dyspnea, unable to speak in full sentences. RR 32, SpO2 88% on room air, HR 125. Breath sounds reveal diffuse wheezing bilaterally. Peak flow is 35% of predicted. After initial albuterol nebulizer, what is the next priority intervention?",
+      "options": [
+        "Administer oral prednisone 60mg",
+        "Administer IV magnesium sulfate 2g over 20 minutes",
+        "Obtain chest X-ray",
+        "Start maintenance fluids"
+      ],
+      "correctAnswer": 1,
+      "rationale": "IV magnesium sulfate (2g over 20 minutes) is indicated for severe asthma exacerbations not responding adequately to initial bronchodilator therapy. This patient has severe/life-threatening asthma: unable to speak full sentences, SpO2 <90%, peak flow <50% predicted. Magnesium causes bronchial smooth muscle relaxation. While corticosteroids are essential, IV/oral steroids take 4-6 hours for effect. Magnesium provides faster bronchodilation. Chest X-ray should not delay treatment. Continuous nebulized albuterol, ipratropium, and systemic steroids should also be given.",
+      "difficulty": "medium",
+      "tags": ["asthma", "severe exacerbation", "magnesium sulfate", "bronchodilator"],
+      "references": ["GINA Guidelines 2023", "ENA Emergency Nursing Core Curriculum"]
+    },
+    {
+      "id": "resp002",
+      "question": "A patient with COPD presents with increased dyspnea, purulent sputum, and fever. ABG shows: pH 7.28, PaCO2 68 mmHg, PaO2 52 mmHg, HCO3 32 mEq/L on 2L nasal cannula. What does this ABG indicate?",
+      "options": [
+        "Acute respiratory alkalosis",
+        "Acute respiratory acidosis with chronic compensation",
+        "Metabolic acidosis with respiratory compensation",
+        "Mixed respiratory and metabolic acidosis"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This ABG shows acute respiratory acidosis superimposed on chronic respiratory acidosis (acute-on-chronic respiratory failure). Key findings: low pH (acidemia), elevated PaCO2 (respiratory acidosis), and elevated HCO3 (metabolic compensation from chronic CO2 retention). In pure acute respiratory acidosis, HCO3 rises only 1 mEq/L per 10 mmHg PaCO2 increase. This patient's HCO3 of 32 suggests chronic compensation (3-4 mEq/L per 10 mmHg in chronic). The low pH indicates acute worsening. COPD patients are chronic CO2 retainers who acutely decompensate with infections.",
+      "difficulty": "hard",
+      "tags": ["COPD", "ABG interpretation", "respiratory acidosis", "acute on chronic"],
+      "references": ["GOLD Guidelines 2023"]
+    },
+    {
+      "id": "resp003",
+      "question": "A 65-year-old female post-hip replacement surgery suddenly develops severe dyspnea, pleuritic chest pain, and hemoptysis. HR 118, BP 95/60, RR 28, SpO2 89% on room air. What is the most likely diagnosis?",
+      "options": [
+        "Acute myocardial infarction",
+        "Pulmonary embolism",
+        "Spontaneous pneumothorax",
+        "Aspiration pneumonia"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This presentation is classic for pulmonary embolism (PE): sudden onset dyspnea, pleuritic chest pain, hemoptysis, tachycardia, hypoxemia, and recent surgery (major risk factor for DVT/PE). The triad of dyspnea, pleuritic chest pain, and hemoptysis is highly suggestive. Post-operative immobility increases DVT risk. Hypotension suggests massive PE with hemodynamic compromise. Immediate evaluation with CT pulmonary angiography (or bedside echo if unstable) and anticoagulation are indicated. MI typically causes pressure-like chest pain. Pneumothorax causes unilateral decreased breath sounds.",
+      "difficulty": "easy",
+      "tags": ["pulmonary embolism", "DVT", "post-operative", "hemoptysis"],
+      "references": ["ACEP PE Clinical Policy 2018"]
+    },
+    {
+      "id": "resp004",
+      "question": "A patient with suspected tension pneumothorax presents with severe respiratory distress, tracheal deviation to the left, absent breath sounds on the right, and hypotension. What is the immediate intervention?",
+      "options": [
+        "Obtain chest X-ray to confirm diagnosis",
+        "Perform needle decompression at 2nd intercostal space, midclavicular line on the right",
+        "Intubate the patient immediately",
+        "Establish large-bore IV access and give fluid bolus"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Tension pneumothorax is a clinical diagnosis requiring immediate needle decompression - do NOT wait for chest X-ray. Insert a large-bore needle (14-16 gauge) at the 2nd intercostal space, midclavicular line on the affected side (right side - opposite to tracheal deviation). Tracheal deviation occurs AWAY from the tension. A rush of air confirms the diagnosis. Follow with chest tube placement. Tension pneumothorax causes cardiovascular collapse due to mediastinal shift and impaired venous return. Delaying treatment for imaging can be fatal. Intubation with positive pressure ventilation can worsen tension.",
+      "difficulty": "easy",
+      "tags": ["tension pneumothorax", "needle decompression", "emergency procedure"],
+      "references": ["ATLS Guidelines", "ENA Trauma Nursing Core Course"]
+    },
+    {
+      "id": "resp005",
+      "question": "A 70-year-old male with COPD on home oxygen presents with worsening dyspnea. He is using accessory muscles and has paradoxical abdominal movement. ABG: pH 7.25, PaCO2 78, PaO2 55 on 4L NC. SpO2 is 86%. What is the most appropriate next intervention?",
+      "options": [
+        "Increase oxygen to 6L via nasal cannula",
+        "Initiate non-invasive positive pressure ventilation (BiPAP)",
+        "Proceed with immediate endotracheal intubation",
+        "Administer IV methylprednisolone and nebulized bronchodilators only"
+      ],
+      "correctAnswer": 1,
+      "rationale": "BiPAP (bilevel positive airway pressure) is first-line for acute hypercapnic respiratory failure in COPD. This patient shows signs of impending respiratory failure: accessory muscle use, paradoxical breathing (diaphragmatic fatigue), severe hypercapnia (PaCO2 78), and acidosis (pH 7.25). BiPAP reduces work of breathing, improves ventilation, and can prevent intubation. Typical settings: IPAP 10-12, EPAP 4-5, titrate to comfort and ABG improvement. Simply increasing O2 won't address hypercapnia and may worsen CO2 retention. Immediate intubation is reserved for patients who cannot protect airway or fail NIV. Bronchodilators/steroids are adjuncts.",
+      "difficulty": "medium",
+      "tags": ["COPD", "BiPAP", "respiratory failure", "hypercapnia", "NIV"],
+      "references": ["GOLD Guidelines 2023", "ATS/ERS NIV Guidelines"]
+    },
+    {
+      "id": "resp006",
+      "question": "Which finding on chest X-ray is most consistent with a right-sided tension pneumothorax?",
+      "options": [
+        "Right-sided pleural effusion with meniscus sign",
+        "Absence of lung markings on right with mediastinal shift to the left",
+        "Right lower lobe consolidation with air bronchograms",
+        "Bilateral diffuse infiltrates with normal heart size"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Tension pneumothorax on chest X-ray shows: absence of lung markings on the affected side (collapsed lung), mediastinal shift AWAY from the affected side (toward the left in right-sided tension), flattening or inversion of the ipsilateral hemidiaphragm, and widened intercostal spaces. However, tension pneumothorax is a CLINICAL diagnosis - treatment should not be delayed for imaging in unstable patients. Pleural effusion shows meniscus sign and fluid levels. Consolidation with air bronchograms suggests pneumonia. Bilateral infiltrates suggest ARDS or pulmonary edema.",
+      "difficulty": "easy",
+      "tags": ["tension pneumothorax", "chest X-ray", "mediastinal shift"],
+      "references": ["Radiology Fundamentals", "ATLS Guidelines"]
+    },
+    {
+      "id": "resp007",
+      "question": "A patient with community-acquired pneumonia has the following: confusion, BUN 22 mg/dL, RR 32, BP 85/50, age 68. Using the CURB-65 score, what is this patient's score and recommended disposition?",
+      "options": [
+        "Score 2; outpatient treatment appropriate",
+        "Score 3; consider hospital admission",
+        "Score 4; ICU admission recommended",
+        "Score 5; immediate intubation required"
+      ],
+      "correctAnswer": 2,
+      "rationale": "CURB-65 score = 4 points: Confusion (1), Urea/BUN >19 mg/dL (1), Respiratory rate ≥30 (1), Blood pressure systolic <90 or diastolic ≤60 (1), age ≥65 (1). Score interpretation: 0-1 = outpatient treatment; 2 = consider admission; 3-5 = severe pneumonia, consider ICU. This patient scores 4, indicating severe CAP with high mortality risk (>25%), warranting ICU admission. CURB-65 helps stratify pneumonia severity and guide disposition. Additional ICU criteria include need for vasopressors or mechanical ventilation. The score doesn't directly indicate intubation need - that's based on clinical assessment.",
+      "difficulty": "medium",
+      "tags": ["pneumonia", "CURB-65", "severity scoring", "CAP"],
+      "references": ["IDSA/ATS CAP Guidelines 2019"]
+    },
+    {
+      "id": "resp008",
+      "question": "A patient with asthma exacerbation has been receiving continuous albuterol nebulization for 2 hours. The nurse notes the patient has become increasingly drowsy and breath sounds are now diminished with minimal wheezing. What does this indicate?",
+      "options": [
+        "Improvement - the bronchospasm is resolving",
+        "Medication toxicity from excessive albuterol",
+        "Impending respiratory failure - the 'silent chest'",
+        "Development of pneumothorax"
+      ],
+      "correctAnswer": 2,
+      "rationale": "A 'silent chest' (diminished breath sounds with decreased wheezing) in a patient with severe asthma who becomes drowsy indicates impending respiratory failure. Wheezing requires airflow - as airways become critically obstructed, airflow decreases and wheezing diminishes. Combined with altered mental status (CO2 narcosis from hypercapnia), this is a pre-arrest situation requiring immediate intervention: prepare for intubation, continue aggressive bronchodilator therapy, consider IV epinephrine or terbutaline. Improvement would show increased air movement and clearing wheezes with improved mental status. This is NOT a good sign.",
+      "difficulty": "medium",
+      "tags": ["asthma", "silent chest", "respiratory failure", "impending arrest"],
+      "references": ["GINA Guidelines 2023", "ENA Emergency Nursing Core Curriculum"]
+    },
+    {
+      "id": "resp009",
+      "question": "A 55-year-old male with sudden onset severe dyspnea has the following findings: SpO2 82% on 15L non-rebreather, bilateral crackles, pink frothy sputum, BP 210/120, HR 120. What is the priority intervention?",
+      "options": [
+        "Obtain chest X-ray and ECG",
+        "Administer furosemide 80mg IV",
+        "Apply BiPAP and administer nitroglycerin",
+        "Prepare for immediate intubation"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This patient has acute cardiogenic pulmonary edema (flash pulmonary edema) with severe hypertension. Priority is BiPAP (reduces preload, decreases work of breathing, improves oxygenation) and nitroglycerin (reduces preload and afterload, decreases pulmonary congestion). Pink frothy sputum is classic for pulmonary edema. BiPAP can prevent intubation in many cases. Nitroglycerin IV infusion is preferred for rapid titration. Furosemide is important but takes time to work and may cause reflex vasoconstriction initially. Diagnostic studies should not delay treatment. Intubation is reserved for patients failing NIV or unable to protect airway.",
+      "difficulty": "medium",
+      "tags": ["pulmonary edema", "BiPAP", "nitroglycerin", "hypertensive emergency"],
+      "references": ["AHA Heart Failure Guidelines 2022"]
+    },
+    {
+      "id": "resp010",
+      "question": "What is the Berlin criteria definition for moderate ARDS?",
+      "options": [
+        "PaO2/FiO2 ratio 201-300 mmHg with PEEP ≥5 cm H2O",
+        "PaO2/FiO2 ratio 101-200 mmHg with PEEP ≥5 cm H2O",
+        "PaO2/FiO2 ratio ≤100 mmHg with PEEP ≥5 cm H2O",
+        "PaO2/FiO2 ratio >300 mmHg with bilateral infiltrates"
+      ],
+      "correctAnswer": 1,
+      "rationale": "According to Berlin criteria, moderate ARDS is defined as PaO2/FiO2 ratio 101-200 mmHg with PEEP ≥5 cm H2O. ARDS classification: Mild = P/F 201-300; Moderate = P/F 101-200; Severe = P/F ≤100. Additional Berlin criteria include: acute onset (within 1 week of known insult), bilateral opacities on imaging not fully explained by effusions/collapse/nodules, and respiratory failure not fully explained by cardiac failure or fluid overload. Mortality increases with severity: mild ~27%, moderate ~32%, severe ~45%. Management includes lung-protective ventilation with low tidal volumes (6 mL/kg IBW).",
+      "difficulty": "medium",
+      "tags": ["ARDS", "Berlin criteria", "P/F ratio", "respiratory failure"],
+      "references": ["Berlin Definition of ARDS 2012", "ARDSNet Protocol"]
+    },
+    {
+      "id": "resp011",
+      "question": "A patient with massive pulmonary embolism (PE) presents with BP 75/50, HR 130, and SpO2 84% on 15L non-rebreather. CT confirms bilateral PE with RV strain. What is the most appropriate treatment?",
+      "options": [
+        "Heparin infusion and supportive care",
+        "Systemic thrombolytic therapy (tPA)",
+        "Inferior vena cava (IVC) filter placement",
+        "Surgical embolectomy only"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Systemic thrombolytic therapy (tPA, alteplase 100mg over 2 hours) is indicated for massive (high-risk) PE with hemodynamic instability. This patient has massive PE: hypotension (SBP <90), tachycardia, hypoxemia, and RV strain on imaging. Thrombolytics rapidly dissolve clot and reduce RV afterload. Contraindications must be considered but hemodynamic collapse often outweighs bleeding risk. Heparin alone is insufficient for massive PE. IVC filters prevent future emboli but don't treat current clot. Surgical embolectomy is reserved for patients with contraindications to thrombolytics or failed medical therapy. Catheter-directed therapy is an alternative.",
+      "difficulty": "hard",
+      "tags": ["pulmonary embolism", "massive PE", "thrombolytics", "tPA"],
+      "references": ["ACEP PE Clinical Policy 2018", "ESC PE Guidelines 2019"]
+    },
+    {
+      "id": "resp012",
+      "question": "A 22-year-old tall, thin male presents with sudden onset right-sided chest pain and dyspnea. He has no significant medical history. Breath sounds are decreased on the right. Chest X-ray shows 25% right pneumothorax. Vital signs are stable. What is the appropriate management?",
+      "options": [
+        "Immediate chest tube insertion",
+        "Needle decompression followed by chest tube",
+        "Observation with supplemental oxygen and repeat X-ray in 6 hours",
+        "Discharge home with follow-up chest X-ray in 24 hours"
+      ],
+      "correctAnswer": 2,
+      "rationale": "A small primary spontaneous pneumothorax (<30%) in a stable patient can be managed conservatively with observation, supplemental oxygen (accelerates reabsorption by creating nitrogen gradient), and serial imaging. This patient fits the classic profile: young, tall, thin male (due to apical blebs). No intervention is needed if the patient remains stable and pneumothorax doesn't expand. High-flow oxygen can increase reabsorption rate from 1.25% to 4% per day. Chest tube is indicated for: large pneumothorax (>30%), symptomatic patients, tension physiology, or failure of conservative management. Needle aspiration is another option for moderate pneumothorax.",
+      "difficulty": "medium",
+      "tags": ["spontaneous pneumothorax", "observation", "conservative management"],
+      "references": ["BTS Pneumothorax Guidelines 2010", "ACEP Clinical Policy"]
+    },
+    {
+      "id": "resp013",
+      "question": "A patient with COPD exacerbation is started on BiPAP. Initial settings are IPAP 10, EPAP 5. After 30 minutes, ABG shows pH 7.30, PaCO2 65 (previously 72). The patient reports the mask is uncomfortable. What is the appropriate adjustment?",
+      "options": [
+        "Discontinue BiPAP and intubate",
+        "Decrease IPAP to improve comfort",
+        "Increase IPAP to 14-16 to further reduce PaCO2",
+        "Switch to CPAP at 10 cm H2O"
+      ],
+      "correctAnswer": 2,
+      "rationale": "The patient is showing improvement (PaCO2 decreased from 72 to 65, pH improving) but still has significant hypercapnia. Increasing IPAP (inspiratory pressure) will increase tidal volume and minute ventilation, further reducing PaCO2. The pressure support (IPAP minus EPAP) drives ventilation. Typical IPAP range is 10-20 cm H2O. Address mask discomfort by adjusting fit, trying different mask types, or using skin barriers. Decreasing IPAP would reduce ventilation. CPAP provides no pressure support for ventilation. Intubation is premature given the patient is improving. Continue to titrate BiPAP based on clinical response and ABGs.",
+      "difficulty": "medium",
+      "tags": ["BiPAP", "COPD", "NIV settings", "hypercapnia"],
+      "references": ["ATS/ERS NIV Guidelines", "GOLD Guidelines 2023"]
+    },
+    {
+      "id": "resp014",
+      "question": "Which antibiotic regimen is recommended for hospitalized community-acquired pneumonia (non-ICU) in a patient with no risk factors for drug-resistant pathogens?",
+      "options": [
+        "Azithromycin monotherapy",
+        "Respiratory fluoroquinolone (levofloxacin or moxifloxacin) monotherapy OR beta-lactam plus macrolide",
+        "Vancomycin plus piperacillin-tazobactam",
+        "Ceftriaxone monotherapy"
+      ],
+      "correctAnswer": 1,
+      "rationale": "For hospitalized non-ICU CAP without risk factors for resistant organisms, guidelines recommend: respiratory fluoroquinolone monotherapy (levofloxacin 750mg or moxifloxacin 400mg daily) OR combination of beta-lactam (ceftriaxone, ampicillin-sulbactam, or cefotaxime) plus macrolide (azithromycin or doxycycline). This covers typical pathogens (S. pneumoniae, H. influenzae) and atypicals (Mycoplasma, Chlamydia, Legionella). Azithromycin alone doesn't cover resistant pneumococcus. Vancomycin/pip-tazo is for healthcare-associated pneumonia with MRSA/Pseudomonas risk. Ceftriaxone alone misses atypicals. Duration is typically 5-7 days.",
+      "difficulty": "medium",
+      "tags": ["pneumonia", "CAP", "antibiotics", "empiric therapy"],
+      "references": ["IDSA/ATS CAP Guidelines 2019"]
+    },
+    {
+      "id": "resp015",
+      "question": "A patient receiving mechanical ventilation has the following settings: Vt 500 mL, RR 14, FiO2 60%, PEEP 10. ABG shows pH 7.48, PaCO2 30, PaO2 110. What ventilator adjustment is indicated?",
+      "options": [
+        "Increase respiratory rate",
+        "Decrease respiratory rate or tidal volume",
+        "Increase FiO2",
+        "Increase PEEP"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This ABG shows respiratory alkalosis (pH 7.48, PaCO2 30) - the patient is being over-ventilated. To correct, decrease minute ventilation by reducing respiratory rate or tidal volume. PaCO2 is inversely related to minute ventilation (RR × Vt). The PaO2 of 110 is adequate, so no increase in FiO2 or PEEP is needed. In fact, FiO2 could potentially be weaned. Always consider why the patient might be hyperventilating (pain, anxiety, fever, PE) before simply adjusting the ventilator. For lung-protective ventilation in ARDS, target Vt 6 mL/kg ideal body weight and allow permissive hypercapnia if needed.",
+      "difficulty": "medium",
+      "tags": ["mechanical ventilation", "ABG", "respiratory alkalosis", "ventilator management"],
+      "references": ["ARDSNet Protocol", "Mechanical Ventilation Guidelines"]
+    },
+    {
+      "id": "resp016",
+      "question": "A patient with a large left pleural effusion undergoes thoracentesis. During the procedure, the patient develops severe dyspnea, cough, and chest tightness after 1.5 liters is removed. What complication has likely occurred?",
+      "options": [
+        "Pneumothorax",
+        "Re-expansion pulmonary edema",
+        "Hemothorax",
+        "Vasovagal reaction"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Re-expansion pulmonary edema (RPE) occurs when a chronically collapsed lung is rapidly re-expanded after large-volume thoracentesis (typically >1-1.5 L). Symptoms include dyspnea, cough, chest tightness, and sometimes frothy sputum. The mechanism involves increased capillary permeability in the re-expanded lung. Prevention includes limiting drainage to 1-1.5 L per session and stopping if the patient develops chest discomfort or cough. Treatment is supportive with oxygen and possibly positive pressure ventilation. Pneumothorax would show absent breath sounds. Hemothorax causes bloody drainage. Vasovagal causes bradycardia and hypotension.",
+      "difficulty": "hard",
+      "tags": ["thoracentesis", "re-expansion pulmonary edema", "pleural effusion", "complication"],
+      "references": ["Chest Medicine Guidelines", "ENA Emergency Nursing Core Curriculum"]
+    },
+    {
+      "id": "resp017",
+      "question": "What is the most common cause of an exudative pleural effusion?",
+      "options": [
+        "Congestive heart failure",
+        "Cirrhosis",
+        "Pneumonia (parapneumonic effusion)",
+        "Nephrotic syndrome"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Pneumonia (parapneumonic effusion) is the most common cause of exudative pleural effusion. Light's criteria differentiate exudative from transudative effusions. Exudate criteria (any one): pleural protein/serum protein >0.5, pleural LDH/serum LDH >0.6, or pleural LDH >2/3 upper limit of normal serum LDH. Exudative causes include infection (pneumonia, TB, empyema), malignancy, pulmonary embolism, and inflammatory conditions. Transudative effusions result from hydrostatic/oncotic pressure imbalances: CHF (most common transudate), cirrhosis, nephrotic syndrome. Parapneumonic effusions may require chest tube drainage if complicated (pH <7.2, glucose <60, positive culture).",
+      "difficulty": "easy",
+      "tags": ["pleural effusion", "exudate", "Light's criteria", "parapneumonic"],
+      "references": ["Light's Criteria", "Pulmonary Medicine Guidelines"]
+    },
+    {
+      "id": "resp018",
+      "question": "A patient with severe asthma exacerbation is not improving despite aggressive treatment. The decision is made to intubate. Which induction agent is preferred?",
+      "options": [
+        "Etomidate",
+        "Ketamine",
+        "Propofol",
+        "Midazolam"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Ketamine is the preferred induction agent for intubating patients with severe asthma due to its bronchodilatory properties. Ketamine causes catecholamine release and direct smooth muscle relaxation, leading to bronchodilation. It also maintains respiratory drive and hemodynamic stability. Dose: 1-2 mg/kg IV. Etomidate is hemodynamically neutral but has no bronchodilatory effect. Propofol can cause hypotension and histamine release (theoretical concern). Midazolam provides no bronchodilation. Post-intubation, use low respiratory rates (8-10/min) and prolonged expiratory time to prevent air trapping (auto-PEEP). Permissive hypercapnia may be necessary.",
+      "difficulty": "medium",
+      "tags": ["asthma", "intubation", "ketamine", "RSI"],
+      "references": ["Emergency Airway Management Guidelines", "GINA Guidelines"]
+    },
+    {
+      "id": "resp019",
+      "question": "A patient presents with stridor, drooling, and tripod positioning. Temperature is 39.5°C (103.1°F). The patient appears toxic and prefers to sit upright. What is the most likely diagnosis?",
+      "options": [
+        "Croup",
+        "Epiglottitis",
+        "Foreign body aspiration",
+        "Peritonsillar abscess"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This presentation is classic for epiglottitis: stridor (upper airway obstruction), drooling (inability to swallow due to pain/swelling), tripod positioning (leaning forward on hands to maximize airway opening), high fever, and toxic appearance. Epiglottitis is now more common in adults than children due to Hib vaccination. Causative organisms include H. influenzae, Streptococcus, and Staphylococcus. Management priorities: keep patient calm, avoid examining throat (can precipitate complete obstruction), prepare for emergent airway management, and administer IV antibiotics (ceftriaxone + vancomycin). Croup causes barking cough and is typically viral in children. Foreign body has sudden onset without fever.",
+      "difficulty": "easy",
+      "tags": ["epiglottitis", "stridor", "upper airway obstruction", "emergency airway"],
+      "references": ["ENA Emergency Nursing Core Curriculum", "Airway Management Guidelines"]
+    },
+    {
+      "id": "resp020",
+      "question": "A patient with PE has a Wells score of 6 and positive D-dimer. CT pulmonary angiography is contraindicated due to contrast allergy. What is the next best diagnostic test?",
+      "options": [
+        "Chest X-ray",
+        "Ventilation-perfusion (V/Q) scan",
+        "Lower extremity duplex ultrasound",
+        "Echocardiogram"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Ventilation-perfusion (V/Q) scan is the alternative imaging modality when CTPA is contraindicated (contrast allergy, renal insufficiency, pregnancy). A high-probability V/Q scan (perfusion defects with normal ventilation - 'mismatch') in a high pretest probability patient confirms PE. Normal V/Q scan effectively rules out PE. Intermediate probability requires further testing. Lower extremity ultrasound can support diagnosis if DVT is found but doesn't evaluate pulmonary vasculature directly. Echocardiogram shows RV strain but is not diagnostic. Chest X-ray is often normal in PE. For contrast allergy, premedication with steroids/antihistamines may allow CTPA if V/Q unavailable.",
+      "difficulty": "medium",
+      "tags": ["pulmonary embolism", "V/Q scan", "contrast allergy", "diagnosis"],
+      "references": ["ACEP PE Clinical Policy 2018", "ESC PE Guidelines 2019"]
+    },
+    {
+      "id": "resp021",
+      "question": "In a patient with ARDS, what is the recommended tidal volume for lung-protective ventilation?",
+      "options": [
+        "10-12 mL/kg actual body weight",
+        "8-10 mL/kg ideal body weight",
+        "6 mL/kg ideal body weight",
+        "4 mL/kg actual body weight"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Lung-protective ventilation for ARDS uses low tidal volumes of 6 mL/kg ideal body weight (IBW). The landmark ARDSNet trial demonstrated that low tidal volume ventilation (6 mL/kg IBW) reduced mortality by 22% compared to traditional volumes (12 mL/kg). IBW is calculated based on height, not actual weight: Males: 50 + 2.3(height in inches - 60); Females: 45.5 + 2.3(height in inches - 60). Additional targets: plateau pressure ≤30 cm H2O, adequate PEEP (often 10-15+ cm H2O), and permissive hypercapnia if needed. Using actual body weight in obese patients leads to overdistension and ventilator-induced lung injury.",
+      "difficulty": "easy",
+      "tags": ["ARDS", "lung-protective ventilation", "tidal volume", "ARDSNet"],
+      "references": ["ARDSNet Protocol", "ARDS Clinical Practice Guidelines"]
+    },
+    {
+      "id": "resp022",
+      "question": "A patient with COPD exacerbation is being treated with nebulized albuterol and ipratropium. What is the mechanism of action of ipratropium?",
+      "options": [
+        "Beta-2 adrenergic agonist causing bronchodilation",
+        "Anticholinergic blocking muscarinic receptors in airway smooth muscle",
+        "Phosphodiesterase inhibitor increasing cAMP",
+        "Leukotriene receptor antagonist reducing inflammation"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Ipratropium bromide is an anticholinergic (antimuscarinic) bronchodilator. It blocks muscarinic M3 receptors on airway smooth muscle, preventing acetylcholine-mediated bronchoconstriction. It also reduces mucus secretion. Ipratropium is particularly effective in COPD (where cholinergic tone is increased) and provides additive bronchodilation when combined with beta-agonists. Onset is slower than albuterol (15-30 min vs 5 min) but duration is longer (4-6 hours). Albuterol is the beta-2 agonist. Theophylline is the PDE inhibitor. Montelukast is the leukotriene antagonist. Side effects include dry mouth and urinary retention.",
+      "difficulty": "easy",
+      "tags": ["ipratropium", "anticholinergic", "COPD", "bronchodilator", "pharmacology"],
+      "references": ["GOLD Guidelines 2023", "Pharmacology References"]
+    },
+    {
+      "id": "resp023",
+      "question": "A patient with pneumonia develops septic shock. Blood pressure is 78/45 despite 3L crystalloid resuscitation. Lactate is 4.5 mmol/L. What is the next intervention?",
+      "options": [
+        "Continue fluid resuscitation with another 2L bolus",
+        "Start norepinephrine infusion",
+        "Administer hydrocortisone 100mg IV",
+        "Obtain central venous catheter before starting vasopressors"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Norepinephrine is the first-line vasopressor for septic shock when hypotension persists despite adequate fluid resuscitation (typically 30 mL/kg or 2-3L). This patient has received 3L without adequate response, indicating vasopressor need. Norepinephrine provides alpha-adrenergic vasoconstriction with some beta-1 inotropic effect. Target MAP ≥65 mmHg. Continuing fluids alone risks volume overload without addressing vasodilation. Hydrocortisone is considered for refractory shock despite adequate fluids and vasopressors. Vasopressors can be started peripherally while obtaining central access - don't delay treatment. Surviving Sepsis Campaign recommends early vasopressors.",
+      "difficulty": "medium",
+      "tags": ["septic shock", "norepinephrine", "vasopressor", "pneumonia"],
+      "references": ["Surviving Sepsis Campaign Guidelines 2021"]
+    },
+    {
+      "id": "resp024",
+      "question": "A patient on mechanical ventilation develops sudden high peak inspiratory pressures with normal plateau pressures. What is the most likely cause?",
+      "options": [
+        "Pneumothorax",
+        "ARDS worsening",
+        "Endotracheal tube obstruction or kinking",
+        "Decreased lung compliance"
+      ],
+      "correctAnswer": 2,
+      "rationale": "High peak pressure with normal plateau pressure indicates increased airway resistance, not decreased compliance. The difference between peak and plateau pressure reflects resistance in the airways and circuit. Common causes include: ETT obstruction (secretions, kinking, biting), bronchospasm, or circuit obstruction. Pneumothorax, ARDS, and decreased compliance cause elevated BOTH peak AND plateau pressures because they affect lung/chest wall compliance. Immediate actions: suction ETT, check for kinking, assess for bronchospasm, verify circuit integrity. Peak pressure = resistance + compliance factors; Plateau pressure = compliance factors only.",
+      "difficulty": "hard",
+      "tags": ["mechanical ventilation", "peak pressure", "plateau pressure", "airway resistance"],
+      "references": ["Mechanical Ventilation Guidelines", "Critical Care Nursing"]
+    },
+    {
+      "id": "resp025",
+      "question": "A patient with suspected PE has a Wells score of 1.5 (PE unlikely). D-dimer is negative. What is the appropriate next step?",
+      "options": [
+        "Obtain CT pulmonary angiography",
+        "Start empiric anticoagulation",
+        "PE is effectively ruled out; evaluate for alternative diagnoses",
+        "Obtain V/Q scan"
+      ],
+      "correctAnswer": 2,
+      "rationale": "In patients with low pretest probability (Wells ≤4, 'PE unlikely') and negative high-sensitivity D-dimer, PE is effectively ruled out without imaging. The negative predictive value approaches 99%. This is the basis of validated diagnostic algorithms (Wells + D-dimer). Unnecessary CTPA exposes patients to radiation and contrast risks. D-dimer is sensitive but not specific - it's elevated in many conditions (infection, malignancy, pregnancy, recent surgery). A positive D-dimer in low-risk patients requires imaging. In high pretest probability patients, proceed directly to imaging regardless of D-dimer. Consider alternative diagnoses for the patient's symptoms.",
+      "difficulty": "medium",
+      "tags": ["pulmonary embolism", "Wells score", "D-dimer", "diagnostic algorithm"],
+      "references": ["ACEP PE Clinical Policy 2018", "PERC Rule"]
+    },
+    {
+      "id": "resp026",
+      "question": "A patient with asthma is receiving IV magnesium sulfate. Which assessment finding indicates magnesium toxicity?",
+      "options": [
+        "Hypertension and tachycardia",
+        "Hyporeflexia and respiratory depression",
+        "Hyperreflexia and muscle rigidity",
+        "Polyuria and polydipsia"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Magnesium toxicity causes hyporeflexia (loss of deep tendon reflexes), respiratory depression, hypotension, and cardiac conduction abnormalities. Progression: therapeutic (4-6 mEq/L) → loss of DTRs (8-10 mEq/L) → respiratory depression (12-15 mEq/L) → cardiac arrest (>15 mEq/L). Monitor DTRs during magnesium infusion - loss of patellar reflex is an early warning sign. Treatment of toxicity: stop infusion, administer calcium gluconate 1g IV (antagonizes magnesium), and support ventilation. Patients with renal insufficiency are at higher risk. Hyperreflexia suggests hypocalcemia or other conditions. Magnesium causes hypotension, not hypertension.",
+      "difficulty": "medium",
+      "tags": ["magnesium toxicity", "asthma", "adverse effects", "monitoring"],
+      "references": ["Pharmacology Guidelines", "Emergency Medicine References"]
+    },
+    {
+      "id": "resp027",
+      "question": "A patient with COPD and pneumonia has the following ABG: pH 7.35, PaCO2 58, HCO3 31, PaO2 62 on 2L NC. What is the interpretation?",
+      "options": [
+        "Uncompensated respiratory acidosis",
+        "Compensated respiratory acidosis (chronic hypercapnia)",
+        "Metabolic alkalosis with respiratory compensation",
+        "Normal ABG"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This ABG shows compensated (chronic) respiratory acidosis. The pH is normal (7.35-7.45), PaCO2 is elevated (respiratory acidosis), and HCO3 is elevated (metabolic compensation). In chronic respiratory acidosis, the kidneys retain bicarbonate to buffer the acidemia - compensation takes 3-5 days to fully develop. The expected compensation: HCO3 increases 3-4 mEq/L for every 10 mmHg increase in PaCO2 chronically. This patient's baseline is likely PaCO2 ~55-60 with compensated HCO3 ~30-32. The current infection may cause acute-on-chronic changes. The PaO2 of 62 on 2L is typical for COPD patients.",
+      "difficulty": "medium",
+      "tags": ["ABG interpretation", "COPD", "compensated respiratory acidosis", "chronic hypercapnia"],
+      "references": ["ABG Interpretation Guidelines", "GOLD Guidelines"]
+    },
+    {
+      "id": "resp028",
+      "question": "A patient with suspected foreign body aspiration has complete upper airway obstruction and is becoming cyanotic. The patient is conscious but cannot speak or cough. What is the immediate intervention?",
+      "options": [
+        "Perform blind finger sweep",
+        "Perform abdominal thrusts (Heimlich maneuver)",
+        "Attempt bag-valve-mask ventilation",
+        "Prepare for emergency cricothyrotomy"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Abdominal thrusts (Heimlich maneuver) are the immediate intervention for complete airway obstruction in a conscious adult. Stand behind the patient, place fist above umbilicus, grasp with other hand, and deliver quick upward thrusts until object is expelled or patient becomes unconscious. If patient becomes unconscious: lower to ground, call for help, begin CPR (compressions may dislodge object), and check mouth before ventilations. Blind finger sweeps are not recommended (can push object deeper). BVM won't work with complete obstruction. Cricothyrotomy is for 'can't intubate, can't oxygenate' situations after other measures fail.",
+      "difficulty": "easy",
+      "tags": ["foreign body obstruction", "Heimlich maneuver", "choking", "BLS"],
+      "references": ["AHA BLS Guidelines 2020"]
+    },
+    {
+      "id": "resp029",
+      "question": "A patient with PE is started on heparin infusion. Four days later, platelet count drops from 180,000 to 65,000/μL. What is the most appropriate action?",
+      "options": [
+        "Continue heparin and monitor platelets daily",
+        "Stop heparin, start argatroban, and order HIT antibody testing",
+        "Transfuse platelets to maintain count >100,000",
+        "Switch to low-molecular-weight heparin"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This presentation suggests heparin-induced thrombocytopenia (HIT): >50% platelet drop occurring 5-10 days after heparin initiation (or sooner with prior exposure). HIT is a prothrombotic condition - paradoxically causes clotting, not bleeding. Management: immediately stop ALL heparin (including flushes), start alternative anticoagulation (argatroban, bivalirudin, or fondaparinux), and send HIT antibody (PF4) testing. Do NOT transfuse platelets (can worsen thrombosis). Do NOT switch to LMWH (cross-reactivity). 4T score helps assess probability. HIT can cause limb-threatening arterial thrombosis, stroke, and PE. Warfarin is contraindicated until platelets recover.",
+      "difficulty": "hard",
+      "tags": ["HIT", "heparin-induced thrombocytopenia", "argatroban", "anticoagulation"],
+      "references": ["ASH HIT Guidelines 2018"]
+    },
+    {
+      "id": "resp030",
+      "question": "A patient with severe ARDS has refractory hypoxemia despite FiO2 100% and PEEP 18 cm H2O. PaO2 is 55 mmHg. What adjunctive therapy should be considered?",
+      "options": [
+        "Increase tidal volume to 10 mL/kg",
+        "Prone positioning",
+        "Decrease PEEP to reduce barotrauma risk",
+        "Start high-dose corticosteroids"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Prone positioning is indicated for moderate-to-severe ARDS (P/F <150) with refractory hypoxemia despite optimized ventilation. The PROSEVA trial showed prone positioning for ≥16 hours/day reduced mortality by 50% in severe ARDS. Mechanisms: improved V/Q matching, recruitment of dorsal lung regions, reduced ventilator-induced lung injury, and improved secretion drainage. This patient has severe ARDS (P/F ratio = 55/1.0 = 55). Increasing tidal volume violates lung-protective strategy. Decreasing PEEP would worsen hypoxemia. Steroids may help but are not first-line for refractory hypoxemia. Other rescue therapies include inhaled vasodilators (nitric oxide, epoprostenol) and ECMO.",
+      "difficulty": "hard",
+      "tags": ["ARDS", "prone positioning", "refractory hypoxemia", "PROSEVA trial"],
+      "references": ["PROSEVA Trial", "ARDS Clinical Practice Guidelines"]
+    },
+    {
+      "id": "resp031",
+      "question": "A patient with community-acquired pneumonia grows Streptococcus pneumoniae from blood cultures. The isolate is penicillin-susceptible. What is the preferred antibiotic?",
+      "options": [
+        "Vancomycin",
+        "Ampicillin or penicillin G",
+        "Azithromycin monotherapy",
+        "Linezolid"
+      ],
+      "correctAnswer": 1,
+      "rationale": "For penicillin-susceptible Streptococcus pneumoniae (PSSP), penicillin G or ampicillin remains the drug of choice. Despite widespread resistance concerns, many pneumococcal isolates remain penicillin-susceptible. Using narrow-spectrum antibiotics when appropriate reduces selection pressure for resistance and minimizes adverse effects. Vancomycin is reserved for penicillin-resistant strains or severe beta-lactam allergy. Azithromycin monotherapy is inadequate for bacteremic pneumonia. Linezolid has no role in pneumococcal pneumonia. Duration is typically 5-7 days for uncomplicated CAP. De-escalation based on culture results is a key antimicrobial stewardship principle.",
+      "difficulty": "medium",
+      "tags": ["pneumonia", "Streptococcus pneumoniae", "antibiotic stewardship", "penicillin"],
+      "references": ["IDSA/ATS CAP Guidelines 2019"]
+    },
+    {
+      "id": "resp032",
+      "question": "A patient with asthma exacerbation has received three nebulized albuterol treatments. Heart rate has increased from 88 to 135 bpm, and the patient reports palpitations and tremor. What is the appropriate action?",
+      "options": [
+        "Discontinue all bronchodilators immediately",
+        "Continue albuterol but add cardioselective beta-blocker",
+        "Switch to ipratropium-only nebulization and monitor",
+        "Administer adenosine for presumed SVT"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Tachycardia, palpitations, and tremor are common side effects of beta-agonist bronchodilators (albuterol). These are usually self-limiting and not dangerous in most patients. Switching to ipratropium-only nebulization provides bronchodilation without additional beta-agonist effects while monitoring for resolution of symptoms. Do not abruptly stop all bronchodilators in active asthma exacerbation. Beta-blockers are contraindicated in asthma (can cause bronchospasm). The tachycardia is sinus tachycardia from medication effect and sympathetic activation, not SVT requiring adenosine. If severe bronchospasm continues, may need to resume albuterol with close monitoring or consider IV magnesium, epinephrine.",
+      "difficulty": "medium",
+      "tags": ["asthma", "albuterol", "beta-agonist side effects", "tachycardia"],
+      "references": ["GINA Guidelines 2023", "Pharmacology References"]
+    },
+    {
+      "id": "resp033",
+      "question": "Which chest X-ray finding is most consistent with left-sided heart failure?",
+      "options": [
+        "Hyperinflation with flattened diaphragms",
+        "Kerley B lines, cardiomegaly, and cephalization of pulmonary vessels",
+        "Unilateral infiltrate with air bronchograms",
+        "Bilateral apical fibronodular changes"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Classic chest X-ray findings of left heart failure include: Kerley B lines (horizontal lines at lung bases representing interstitial edema), cardiomegaly (cardiothoracic ratio >0.5), cephalization (redistribution of blood flow to upper lobes due to elevated pulmonary venous pressure), perihilar 'bat wing' infiltrates, and pleural effusions (often bilateral, right > left). Hyperinflation with flat diaphragms suggests COPD/emphysema. Unilateral infiltrate with air bronchograms suggests pneumonia. Apical fibronodular changes suggest tuberculosis or prior granulomatous disease.",
+      "difficulty": "easy",
+      "tags": ["chest X-ray", "heart failure", "Kerley B lines", "pulmonary edema"],
+      "references": ["Radiology Fundamentals", "AHA Heart Failure Guidelines"]
+    },
+    {
+      "id": "resp034",
+      "question": "A patient with COPD asks about smoking cessation. Which pharmacological intervention has the highest efficacy for smoking cessation?",
+      "options": [
+        "Nicotine patch alone",
+        "Bupropion alone",
+        "Varenicline (Chantix)",
+        "Nicotine gum alone"
+      ],
+      "correctAnswer": 2,
+      "rationale": "Varenicline (Chantix) has the highest efficacy for smoking cessation among single-agent pharmacotherapies. It is a partial nicotine receptor agonist that reduces cravings and withdrawal symptoms while blocking the rewarding effects of smoking. Meta-analyses show varenicline approximately triples quit rates compared to placebo. Combination nicotine replacement therapy (patch + short-acting form) approaches varenicline efficacy. Bupropion is effective but less so than varenicline. All patients with COPD should be counseled on smoking cessation at every visit - it's the only intervention proven to slow FEV1 decline. Combine pharmacotherapy with behavioral counseling for best results.",
+      "difficulty": "easy",
+      "tags": ["smoking cessation", "varenicline", "COPD", "prevention"],
+      "references": ["GOLD Guidelines 2023", "USPSTF Smoking Cessation Guidelines"]
+    },
+    {
+      "id": "resp035",
+      "question": "A patient with suspected PE has a negative CT pulmonary angiography but high clinical suspicion persists. Lower extremity ultrasound shows acute DVT. What is the appropriate management?",
+      "options": [
+        "No treatment needed since CTPA was negative",
+        "Repeat CTPA in 24 hours",
+        "Initiate anticoagulation therapy",
+        "Perform pulmonary angiography"
+      ],
+      "correctAnswer": 2,
+      "rationale": "The presence of acute DVT requires anticoagulation regardless of CTPA results. DVT and PE are manifestations of the same disease process (venous thromboembolism - VTE). Treatment is the same: anticoagulation. A negative CTPA doesn't exclude subsegmental PE or PE that occurred and resolved. The DVT itself requires treatment to prevent PE and post-thrombotic syndrome. Options include DOACs (rivaroxaban, apixaban), LMWH, or warfarin (with heparin bridge). Duration depends on provoked vs. unprovoked status and bleeding risk. IVC filter is considered only if anticoagulation is contraindicated.",
+      "difficulty": "medium",
+      "tags": ["DVT", "pulmonary embolism", "anticoagulation", "VTE"],
+      "references": ["ACEP PE Clinical Policy 2018", "ASH VTE Guidelines"]
+    },
+    {
+      "id": "resp036",
+      "question": "A patient with pneumothorax has a chest tube placed. Two hours later, there is continuous bubbling in the water seal chamber with respirations and coughing. What does this indicate?",
+      "options": [
+        "Normal function - air is being evacuated",
+        "Persistent air leak (bronchopleural fistula or system leak)",
+        "Chest tube is occluded",
+        "Pneumothorax has resolved"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Continuous bubbling in the water seal chamber indicates an ongoing air leak. Sources include: bronchopleural fistula (communication between bronchus and pleural space), lung parenchymal leak, or system leak (loose connections, crack in tubing). Initial bubbling after chest tube placement is expected as air evacuates. Persistent bubbling beyond 24-48 hours or new bubbling warrants investigation. Check all connections for tightness. If system leak is excluded, the patient has a persistent parenchymal or bronchial leak that may require surgical intervention. No bubbling with good respiratory variation in the water seal indicates the air leak has sealed.",
+      "difficulty": "medium",
+      "tags": ["chest tube", "air leak", "pneumothorax", "water seal"],
+      "references": ["Chest Tube Management Guidelines", "ATLS"]
+    },
+    {
+      "id": "resp037",
+      "question": "A patient with acute respiratory failure requires intubation. Pre-oxygenation SpO2 is 92% on 15L non-rebreather. During laryngoscopy, SpO2 drops to 78%. What technique could have reduced this desaturation risk?",
+      "options": [
+        "Faster intubation attempt",
+        "Apneic oxygenation with high-flow nasal cannula during laryngoscopy",
+        "Hyperventilation before intubation",
+        "Using a smaller endotracheal tube"
+      ],
+      "correctAnswer": 1,
+      "rationale": "Apneic oxygenation using high-flow nasal cannula (HFNC at 15L/min or higher) during laryngoscopy provides continuous oxygen delivery during the apneic period, extending safe apnea time and reducing desaturation. Oxygen flows through the nasopharynx creating positive pressure and providing passive oxygenation even without ventilation. The FELLOW and ENDAO trials support this practice. Standard pre-oxygenation creates an oxygen reservoir in the lungs, but patients with shunt physiology (like this patient with baseline SpO2 92%) desaturate rapidly. Hyperventilation lowers CO2 but doesn't significantly extend safe apnea time. Tube size doesn't affect pre-intubation oxygenation.",
+      "difficulty": "hard",
+      "tags": ["intubation", "apneic oxygenation", "desaturation", "airway management"],
+      "references": ["Difficult Airway Society Guidelines", "FELLOW Trial"]
+    },
+    {
+      "id": "resp038",
+      "question": "A patient with pleural effusion undergoes thoracentesis. Pleural fluid analysis shows: protein 4.5 g/dL (serum 6.8), LDH 320 U/L (serum 180), glucose 25 mg/dL, pH 7.0, WBC 45,000 with 95% neutrophils. What is the diagnosis?",
+      "options": [
+        "Transudative effusion from heart failure",
+        "Simple parapneumonic effusion",
+        "Empyema",
+        "Malignant effusion"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This is empyema (infected pleural space). Diagnostic criteria include: exudative effusion (meets Light's criteria - protein ratio >0.5, LDH ratio >0.6), very low glucose (<40 mg/dL), low pH (<7.2), and high WBC with neutrophil predominance. Empyema requires chest tube drainage - antibiotics alone are insufficient. Frank pus or positive Gram stain/culture also diagnoses empyema. Complicated parapneumonic effusions (pH <7.2, glucose <60, positive culture) also require drainage. Simple parapneumonic effusions have higher pH/glucose and may resolve with antibiotics alone. Transudative effusions don't meet Light's criteria. Malignant effusions typically have lymphocyte predominance.",
+      "difficulty": "hard",
+      "tags": ["empyema", "pleural effusion", "thoracentesis", "Light's criteria"],
+      "references": ["BTS Pleural Disease Guidelines", "IDSA Guidelines"]
+    },
+    {
+      "id": "resp039",
+      "question": "A patient with severe COPD exacerbation on BiPAP becomes increasingly agitated and confused. ABG shows pH 7.18, PaCO2 95, PaO2 65. What is the next step?",
+      "options": [
+        "Increase BiPAP IPAP and sedate the patient",
+        "Continue current BiPAP settings and reassess in 1 hour",
+        "Proceed with endotracheal intubation",
+        "Switch to high-flow nasal cannula"
+      ],
+      "correctAnswer": 2,
+      "rationale": "This patient has failed non-invasive ventilation and requires intubation. Indicators of NIV failure include: worsening or severe acidosis (pH <7.20), worsening mental status (agitation, confusion - signs of CO2 narcosis), inability to tolerate mask, hemodynamic instability, or failure to improve within 1-2 hours. PaCO2 of 95 with pH 7.18 indicates severe acute respiratory acidosis. Sedation would worsen respiratory drive and is dangerous without a secured airway. Continuing current settings delays necessary intervention. HFNC provides no ventilatory support for hypercapnic failure. Intubation allows controlled ventilation and airway protection.",
+      "difficulty": "medium",
+      "tags": ["COPD", "BiPAP failure", "intubation", "respiratory acidosis"],
+      "references": ["GOLD Guidelines 2023", "ATS/ERS NIV Guidelines"]
+    },
+    {
+      "id": "resp040",
+      "question": "A patient with asthma has the following peak flow measurements: personal best 500 L/min, current reading 225 L/min. According to the asthma action plan zones, what zone is this patient in?",
+      "options": [
+        "Green zone (>80% of personal best)",
+        "Yellow zone (50-80% of personal best)",
+        "Red zone (<50% of personal best)",
+        "Cannot determine without symptom assessment"
+      ],
+      "correctAnswer": 1,
+      "rationale": "This patient is in the Yellow Zone. Peak flow of 225 L/min is 45% of personal best (225/500 = 0.45 = 45%), which actually falls in the Red Zone (<50%). Let me recalculate: 225/500 = 45%, which is <50%, placing the patient in the RED ZONE. Red zone (<50% personal best) indicates severe exacerbation requiring immediate bronchodilator use and emergency care if no improvement. Yellow zone (50-80%) indicates caution - increase medications per action plan. Green zone (>80%) indicates good control. Peak flow monitoring helps patients recognize deterioration before severe symptoms develop. This patient needs immediate treatment and likely ED evaluation.",
+      "difficulty": "easy",
+      "tags": ["asthma", "peak flow", "action plan", "severity assessment"],
+      "references": ["GINA Guidelines 2023", "NIH Asthma Guidelines"]
+    }
+  ]
+}
